@@ -1,11 +1,4 @@
-export const REQUEST_CITIES = 'REQUEST_CITIES';
-export const RECEIVE_CITIES = 'RECEIVE_CITIES';
-export const RECEIVE_CITIES_FAILED = 'RECEIVE_CITIES_FAILED';
-export const TYPE_FROM = 'TYPE_FROM';
-export const TYPE_TO = 'TYPE_TO';
-export const SET_DEPARTURE_DATE = 'SET_DEPARTURE_DATE';
-export const SET_RETURN_DATE = 'SET_RETURN_DATE';
-export const SET_SEARCH_SUGGESTIONS = 'SET_SEARCH_SUGGESTIONS';
+import { REQUEST_CITIES, RECEIVE_CITIES, RECEIVE_CITIES_FAILED, TYPE_FROM, TYPE_TO, SET_DEPARTURE_DATE, SET_RETURN_DATE, SET_SEARCH_SUGGESTIONS } from "../Search/constant";
 
 export const requestCities=()=>{
     return{
@@ -52,6 +45,13 @@ export const setReturnDate = (date) => {
     return{
         type:SET_RETURN_DATE,
         date: date,
+    }
+}
+
+export const setSearchSuggestions=(suggestions)=>{
+    return{
+        type:SET_SEARCH_SUGGESTIONS,
+        suggestions:suggestions,
     }
 }
 

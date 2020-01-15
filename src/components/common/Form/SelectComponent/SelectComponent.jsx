@@ -14,8 +14,8 @@ class SelectComponent extends React.Component {
     if (value) {
       // console.log(this.props.cities);
       this.setState({ value:value,data:this.props.cities.filter(city=>{
-        let testStr =new RegExp(`^${value}`);
-        return(testStr.test(city.cityname));
+        let testStr =new RegExp(`^${value.toLowerCase()}`);
+        return(testStr.test(city.cityname.toLowerCase()));
       }) });
     } else {
       this.setState({ data: [] });
