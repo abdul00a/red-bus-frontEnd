@@ -1,1 +1,2 @@
 export const REQUEST_BUS_DETAIL = 'REQUEST_BUS_DETAIL';
+export const TOGGLE_TABS = 'TOGGLE_TABS';

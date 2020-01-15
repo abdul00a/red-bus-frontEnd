@@ -22,6 +22,7 @@ class BusInfo extends Component {
     //   .then(res => res.json())
     //   .then(data => console.log(data));
   }
+
   render() {
     return (
       <div>
@@ -117,6 +118,12 @@ class BusInfo extends Component {
           </div>
           <div className="bottom-div">
             <Tab
+              idBus={
+                this.props.busDetail.length !== 0 && this.props.busDetail[0].busNumber
+              }
+              keyVal={
+                this.props.busDetail.length !== 0 && this.props.busDetail[0].key
+              }
               bdpoint={
                 this.props.busDetail.length === 0
                   ? []

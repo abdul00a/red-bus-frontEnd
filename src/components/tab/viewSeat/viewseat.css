@@ -1,0 +1,46 @@
+.seats-display-container {
+  background-color: #f8f9fa;
+  width: 100%;
+  margin-top: -1em;
+  display: flex;
+  padding-top: 1em;
+}
+.left-box {
+  width: 60%;
+}
+.right-box {
+  width: 36%;
+  margin: 10px 0 15px;
+}
+.seat-enq {
+  list-style-type: none;
+  column-count: 2;
+  padding: 0;
+}
+.st-txt {
+  padding: 5px 0;
+  font-size: 1.1em;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+.s-desc {
+  color: #4a4a4a;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.avl-box {
+  border: 1px solid #a7a9ac;
+  background-color: #fff;
+}
+.f-box {
+  border: 1px solid #f1a9a0;
+  background-color: #fff;
+}
+.unavl-box {
+  border: 1px solid #a7a9ac;
+  background-color: #cbcbcb;
+}
+.mr {
+  margin-right: 10px;
+  padding: 0px 10px;
+}

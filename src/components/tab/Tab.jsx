@@ -3,26 +3,30 @@ import { Tabs } from 'antd';
 import './tab.css';
 import BD from './bording_dropping/boarding_dropping';
 import Policy from './booking_policy/booking_policy';
+import { connect } from 'react-redux';
+import { tabToggle } from '../../actions/tab/toggle';
+import RestStop from './rest_stop/restStop';
+import ViewSeat from './viewSeat/viewSeat';
 
 const { TabPane } = Tabs;
 
+const mapStateToProps = () => {
+  return {};
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    RequestingKey: (keyVal, busNum) => dispatch(tabToggle(keyVal, busNum))
+  };
+};
+
 class Tab extends Component {
-  state = {
-    s: ''
+  handleTab = e => {
+    this.props.RequestingKey(e, this.props.idBus);
   };
 
-  handle = e => {
-    console.log(e);
-    console.log(this.state.s);
-    if (this.state.s === e) {
-      this.setState({ s: '0' });
-    } else {
-      this.setState({ s: e });
-    }
-  };
   render() {
     return (
-      <Tabs activeKey={this.state.s} onTabClick={this.handle}>
+      <Tabs activeKey={this.props.keyVal || '0'} onTabClick={this.handleTab}>
         <TabPane tab="Bording & Droping" key="1">
           <BD bdpoint={this.props.bdpoint}></BD>
         </TabPane>
@@ -30,14 +34,14 @@ class Tab extends Component {
           <Policy />
         </TabPane>
         <TabPane tab="Rest Stop()" key="3">
-          Content of Tab Pane 3
+          <RestStop />
         </TabPane>
         <TabPane tab="View Seat" key="4" className="bttn-seat">
-          Content of Tab Pane 3
+          <ViewSeat />
         </TabPane>
       </Tabs>
     );
   }
 }
 
-export default Tab;
+export default connect(mapStateToProps, mapDispatchToProps)(Tab);
