@@ -1,0 +1,17 @@
+.filters-container {
+    height: 45.1vw;
+    width: 25vw;
+    box-shadow: 10px 9px 10px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    overflow: auto;
+}
+
+.filters-container>::-webkit-scrollbar {
+    background: none;
+}
+
+.filters-container::-webkit-scollbar-thumb {
+    width: 5px;
+    background-color: rgba(200, 200, 200, 1);
+}

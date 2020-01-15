@@ -1,0 +1,30 @@
+.ant-select-selection {
+    border-radius: 0px;
+    border-color: rgba(225, 225, 225, 1);
+    height: 45px;
+}
+
+.ant-input {
+    border-radius: 0px;
+    width: 198px;
+    border-color: rgba(225, 225, 225, 1);
+    position: relative;
+    top: 2.7px;
+    height: 45px;
+}
+
+.trip-search-btn {
+    border-radius: 0px;
+    width: 198px;
+    height: 45px;
+    position: relative;
+    top: 2.7px;
+}
+
+.ant-select-selection {
+    padding: 4px 11px 4px 11px;
+}
+
+.ant-select-selection__placeholder {
+    margin-top: -8px;
+}

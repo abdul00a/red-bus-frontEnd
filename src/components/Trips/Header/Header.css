@@ -1,0 +1,12 @@
+.location-header {
+    display: flex;
+    font-size: 25px;
+    padding: 10px 50px 10px 50px;
+    box-shadow: -2px 12px 10px rgba(0, 0, 0, 1);
+}
+
+.modify-btn {
+    position: relative;
+    top: 3px;
+    margin-left: 10px
+}
