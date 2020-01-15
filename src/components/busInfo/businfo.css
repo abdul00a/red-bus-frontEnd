@@ -1,0 +1,87 @@
+.bus-detail {
+  height: 10.6em;
+  width: 75%;
+  border: 1px solid #dddddd;
+  margin: 2em 0 0 2em;
+  padding-top: 1em;
+  list-style-type: none;
+}
+.bus-box {
+  display: flex;
+  padding: 0 1.1em;
+}
+.col-one {
+  width: 30%;
+}
+.col-two {
+  width: 10%;
+}
+.col-three {
+  width: 10%;
+}
+.col-four {
+  width: 10%;
+}
+.col-five {
+  width: 15%;
+}
+.col-six {
+  width: 15%;
+}
+.b-color {
+  color: #3e3e52;
+  font-weight: 700;
+  padding-left: 4px;
+}
+.bus-name {
+  font-size: 1.15em;
+}
+.f-size {
+  font-size: 1.5em;
+}
+.arival {
+  font-weight: lighter;
+}
+.price {
+  font-size: 1.2em;
+  padding-left: 2px;
+}
+.seats {
+  font-size: 1.2em;
+}
+.n-seat {
+  font-size: 1.21em;
+  padding-right: 5px;
+}
+.seat-txt {
+  color: #7e7e8c;
+}
+.arival-date {
+  color: #f5655a;
+  font-size: 1.1em;
+  padding-left: 4px;
+  margin-top: 0.5em;
+}
+.txt-color {
+  color: #7e7e8c;
+  font-size: 0.96em;
+  padding-left: 5px;
+}
+.duration {
+  font-size: 1.3em;
+}
+.bus-type {
+  margin-top: 1.143em;
+}
+.source {
+  margin-top: 2em;
+}
+.dest {
+  margin-top: 0.4em;
+}
+.bottom-div {
+  margin-top: 0.9em;
+  padding: 1px 0;
+  display: flex;
+  justify-content: flex-end;
+}
