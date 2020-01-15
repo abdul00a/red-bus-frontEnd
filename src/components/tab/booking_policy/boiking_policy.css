@@ -7,6 +7,27 @@
 .policy-table {
   width: 100%;
 }
-.tbhead{
-    height: 2em;
+.tbhead {
+  height: 2em;
+}
+.poly-head {
+  font-weight: 600;
+  font-size: 1.3em;
+  padding-bottom: 1em;
+}
+.poly-detail {
+  color: #777671;
+  padding-bottom: 1em;
+}
+.sub-detail {
+  padding: 5px 0;
+}
+.sub-txt {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-decoration: underline;
+  margin-bottom: 0.5em;
+}
+.bottm-txt{
+  font-size: 1.2em
 }

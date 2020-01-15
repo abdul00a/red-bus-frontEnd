@@ -16,7 +16,6 @@ class Tab extends Component {
     console.log(this.state.s);
     if (this.state.s === e) {
       this.setState({ s: '0' });
-      // return;
     } else {
       this.setState({ s: e });
     }

@@ -7,63 +7,58 @@ class Booking_policy extends Component {
     return (
       <div className="bkpolicy">
         <div>
-          <Row>
+          <Row className="poly-head">
             <Col span={12}>Time of Cancellation</Col>
             <Col span={4}>Deduction Percentage</Col>
             <Col span={8}>Cancellation Charges</Col>
           </Row>
-          <Row>
-            <Col span={8}>Before 6 Days</Col>
-            <Col span={8}>10%</Col>
-            <Col span={8}>₹130 / 160 / 200</Col>
-          </Row>
-          <Row>
-            <Col span={8}>
-              After 16th Jan 08:25 PM & Before 20th Jan 08:25 PM
-            </Col>
-            <Col span={8}>10%</Col>
-            <Col span={8}>₹130 / 160 / 200</Col>
-          </Row>
-          <Row>
-            <Col span={8}>
-              After 20th Jan 08:25 PM & Before 22nd Jan 08:25 PM
-            </Col>
-            <Col span={8}>10%</Col>
-            <Col span={8}>₹130 / 160 / 200</Col>
-          </Row>
-          <Row>
-            <Col span={8}>
-              After 22nd Jan 08:25 PM & Before 23rd Jan 08:25 AM
-            </Col>
-            <Col span={8}>25%</Col>
-            <Col span={8}>₹325 / 400 / 500</Col>
-          </Row>
-          <Row>
-            <Col span={8}>
-              After 23rd Jan 08:25 AM & Before 23rd Jan 02:25 PM
-            </Col>
-            <Col span={8}>50%</Col>
-            <Col span={8}>₹650 / 800 / 1000</Col>
-          </Row>
-          <Row>
-            <Col span={8}>
-              After 23rd Jan 02:25 PM & Before 23rd Jan 08:25 PM
-            </Col>
-            <Col span={8}>100%</Col>
-            <Col span={8}>₹1299 / 1599 / 1999</Col>
-          </Row>
-        
+          <div className="poly-detail">
+            <Row className="sub-detail">
+              <Col span={12}>Before 6 Days</Col>
+              <Col span={4}>10%</Col>
+              <Col span={8}>₹130 / 160 / 200</Col>
+            </Row>
+            <Row className="sub-detail">
+              <Col span={12}>Before 5 days</Col>
+              <Col span={4}>10%</Col>
+              <Col span={8}>₹130 / 160 / 200</Col>
+            </Row>
+            <Row className="sub-detail">
+              <Col span={12}>Before 4 days</Col>
+              <Col span={4}>10%</Col>
+              <Col span={8}>₹130 / 160 / 200</Col>
+            </Row>
+            <Row className="sub-detail">
+              <Col span={12}>Before 3 days</Col>
+              <Col span={4}>25%</Col>
+              <Col span={8}>₹325 / 400 / 500</Col>
+            </Row>
+            <Row className="sub-detail">
+              <Col span={12}>Before 2 Days</Col>
+              <Col span={4}>50%</Col>
+              <Col span={8}>₹650 / 800 / 1000</Col>
+            </Row>
+            <Row className="sub-detail">
+              <Col span={12}>Before 1 Days</Col>
+              <Col span={4}>75%</Col>
+              <Col span={8}>₹1299 / 1599 / 1999</Col>
+            </Row>
+          </div>
         </div>
         <div>
-          <span>RESCHEDULE</span>
-          <div>
-            Can be rescheduled <strong>12</strong> hours before departure from
-            the first pick-up point. Reschedule fee <strong>129.90</strong>{' '}
-            INRis applicable.
+          <div className="sub-txt">
+            <span>RESCHEDULE</span>
           </div>
-          <div>
-            If the new ticket you book is of lower amount than the previous
-            booking, no amount will be refunded.
+          <div className="bottm-txt">
+            <div>
+              Can be rescheduled <strong>12</strong> hours before departure from
+              the first pick-up point. Reschedule fee <strong>129.90</strong>{' '}
+              INRis applicable.
+            </div>
+            <div>
+              If the new ticket you book is of lower amount than the previous
+              booking, no amount will be refunded.
+            </div>
           </div>
         </div>
       </div>
