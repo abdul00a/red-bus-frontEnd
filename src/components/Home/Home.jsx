@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Form from '../common/Form/Form';
-import { cities } from '../../city.js';
+import TripQueryForm from '../common/Form/Form';
 import './Home.css'
 
 class Home extends Component {
@@ -8,7 +7,7 @@ class Home extends Component {
     render() { 
         return ( 
             <div className='hero'>
-                <Form cities={cities}/>
+                <TripQueryForm/>
             </div>
          );
     }

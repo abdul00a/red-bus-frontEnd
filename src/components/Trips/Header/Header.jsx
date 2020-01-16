@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
-import Form from '../../common/Form/Form';
-import LocationHeader from './LocationHeader/LocationHeader'
+import { connect } from 'react-redux';
+import TripQueryForm from '../../common/Form/Form';
+import TripHeader from './TripHeader/TripHeader'
 import './Header.css'
 
 class Header extends Component {
@@ -9,11 +9,23 @@ class Header extends Component {
     render() { 
         return ( 
             <div className="location-header">
-                {true&&<LocationHeader fromCityName={this.props.fromCityName} toCityName={this.props.toCityName} />}
-                {false&&<Form cities={this.props.cities}/>}
+                {!this.props.modify&&<TripHeader fromCityName={this.props.fromCityName} toCityName={this.props.toCityName} departureDate={this.props.departureDate} returnDate={this.props.returnDate} />}
+                {this.props.modify&&<TripQueryForm />}
             </div>
          );
     }
 }
+
+const mapStateToProps=(state)=>{
+    return{
+        modify:state.modify,
+    }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+    return{}
+}
  
+Header=connect(mapStateToProps,mapDispatchToProps)(Header);
+
 export default Header;

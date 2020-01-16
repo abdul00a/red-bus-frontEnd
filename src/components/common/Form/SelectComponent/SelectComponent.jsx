@@ -1,5 +1,7 @@
 import React from 'react';
 import { Select, Icon } from 'antd';
+import { connect } from 'react-redux';
+import { setSearchSuggestions } from '../../../../actions/Search/Search';
 
 
 const { Option } = Select;
@@ -12,29 +14,26 @@ class SelectComponent extends React.Component {
 
   handleSearch = value => {
     if (value) {
-      // console.log(this.props.cities);
-      this.setState({ value:value,data:this.props.cities.filter(city=>{
+       this.props.setSearchSuggestions(this.props.cities.filter(city=>{
         let testStr =new RegExp(`^${value.toLowerCase()}`);
         return(testStr.test(city.cityname.toLowerCase()));
-      }) });
+      })) ;
     } else {
-      this.setState({ data: [] });
+      this.props.setSearchSuggestions([])
     }
-    // console.log(this.state);
   };
 
   handleChange = value => {
-    this.setState({ value });
+    this.props.typeLocation(this.props.searchSuggestions.filter(suggestion=>suggestion.id===parseInt(value))[0].cityname)
   };
 
   render() {
-    console.log(this.props.placeholder)
-    const options = this.state.data.map(city => <Option key={city.id}>{city.cityname}</Option>);
+    const options = this.props.searchSuggestions.map(city => <Option key={city.id}>{city.cityname}</Option>);
     <Icon type="user" style={{ color: 'rgba(0,0,0,1)' }} />
     return (
       <Select
         showSearch
-        value={this.state.value}
+        value={this.props.location}
         placeholder={this.props.placeholder}
         style={this.props.style}
         defaultActiveFirstOption={false}
@@ -49,5 +48,21 @@ class SelectComponent extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return{
+    searchSuggestions:state.search.searchSuggestions,
+  }
+}
+
+const mapDispatchToProps =(dispatch) => {
+  return{
+    setSearchSuggestions: (suggestions)=>dispatch(setSearchSuggestions(suggestions)),
+
+  }
+}
+
+SelectComponent = connect(mapStateToProps,mapDispatchToProps)(SelectComponent);
+
 
 export default SelectComponent;
