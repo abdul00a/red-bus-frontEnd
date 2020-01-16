@@ -78,7 +78,7 @@ export const receiveBusesFailed=(err)=>{
 export const fetchCities=()=>{
     return (dispatch)=>{
         dispatch(requestCities());
-        return fetch('http://13.232.240.165:8080/city').then(response=>{
+        return fetch('https://violetbus.herokuapp.com/city').then(response=>{
             response.json().then(cities=>{
                 dispatch(receiveCities(cities));
             }).catch(err=>{
@@ -95,7 +95,7 @@ export const fetchCities=()=>{
 export const fetchSearchResults = (fromCityName, toCityName, departureDate) => {
     return (dispatch) => {
         dispatch(requestBuses());
-        return fetch(`http://13.232.240.165:8080/search?fromCityName=${fromCityName}&toCityName=${toCityName}&departureDate=${departureDate}`).then(response=>{
+        return fetch(`https://violetbus.herokuapp.com//search?fromCityName=${fromCityName}&toCityName=${toCityName}&departureDate=${departureDate}`).then(response=>{
             response.json().then(buses=>{
                 dispatch(receiveBuses(buses));
             }).catch(err=>{
