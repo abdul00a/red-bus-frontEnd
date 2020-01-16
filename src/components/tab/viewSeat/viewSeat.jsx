@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import './viewseat.css';
+import SeatLayout from './seat_layout/seatLayout';
+import SeatLegend from './seat_legend/seatLegend';
+import TripDetail from './trip_detail/tripDetail';
+import BookDesc from './bookDesc/bookdesc';
 
 class ViewSeat extends Component {
+  state = {
+    val: true
+  };
+
+  handle = e => {
+    this.setState({ val: e.target.checked });
+  };
   render() {
     return (
       <div className="seats-display-container">
-        <div className="left-box">s</div>
+        <div className="left-box">
+          <SeatLayout value={this.handle} />
+        </div>
         <div className="right-box">
-          <h3 className="s-desc">SEAT LEGEND</h3>
-          <ul className="seat-enq">
-            <li className="st-txt">
-              <span className="avl-box mr"></span>Available
-            </li>
-            <li className="st-txt">
-              <span className="f-box mr"></span>Female
-            </li>
-            <li className="st-txt">
-              <span className="unavl-box mr"></span>Unavailable
-            </li>
-          </ul>
+          {this.state.val ? <TripDetail /> && <BookDesc /> : <SeatLegend />}
         </div>
       </div>
     );

@@ -1,0 +1,72 @@
+.selectdb-list {
+  display: flex;
+  justify-content: space-between;
+}
+.bpdpAddr-css {
+  width: 70%;
+}
+.ar-tym {
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+.d-li {
+  position: relative;
+  left: 81.3em;
+}
+.locAddr {
+  font-size: 15px;
+  max-height: 40px;
+  overflow: hidden;
+  white-space: normal;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #7e7e8c;
+}
+.bd-inner-list {
+  max-height: 220px;
+  overflow: auto;
+}
+.trip-layout {
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px #999898;
+  margin: 2em 0;
+}
+.fare-summary {
+  font-size: 14px;
+  font-weight: 200;
+  color: #8f8f8f;
+  margin: 20px 1em 24px 2.2em;
+  border-top: 1px solid #c5c4c4;
+  padding-top: 2em;
+}
+.fare-lbl {
+  font-size: 1.2em;
+  color: #3e3e52;
+}
+.fareDisclaimer {
+  text-align: left;
+  font-size: 10px;
+  color: #838083;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.fare-value {
+  font-weight: 700;
+  font-size: 17px;
+  text-align: right;
+  color: #3e3e52;
+  float: right;
+}
+.tabs {
+  padding-top: 1em;
+}
+.continue-payment{
+    height: 3em;
+    border-radius: unset;
+    background-color: #D8576E;
+    border: #D8576E;
+    width: 92%;
+    margin: -15px 22px 1.3em;
+}

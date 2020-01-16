@@ -36,9 +36,9 @@ class Tab extends Component {
         <TabPane tab="Rest Stop()" key="3">
           <RestStop />
         </TabPane>
-        <TabPane tab="View Seat" key="4" className="bttn-seat">
-          <ViewSeat />
-        </TabPane>
+          <TabPane tab="View Seat" key="4" className="bttn-seat">
+            <ViewSeat />
+          </TabPane>
       </Tabs>
     );
   }
