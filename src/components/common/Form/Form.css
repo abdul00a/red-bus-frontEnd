@@ -28,3 +28,7 @@
 .ant-select-selection__placeholder {
     margin-top: -8px;
 }
+
+form {
+    padding: 0.2718vw;
+}
