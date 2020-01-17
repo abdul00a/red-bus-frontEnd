@@ -1,30 +1,13 @@
 import React, { Component } from 'react';
 import './businfo.css';
-import { connect } from 'react-redux';
-import { reqBusDetail } from '../../../../actions/businfo/businfo';
 import Tab from './tab/Tab';
-
-const mapStateToProps = state => {
-  console.log(state);
-  return {
-    busDetail: state.BusDetail.busDetail
-  };
-};
-const mapDispatchToProps = dispatch => {
-  return {
-    RequestBusDetail: () => dispatch(reqBusDetail())
-  };
-};
+import BusDetailHeader from './busDetailHeader/busDetailHeader';
 
 class BusInfo extends Component {
-  componentDidMount() {
-    // this.props.RequestBusDetail();
-  }
-
   render() {
-    // console.log(this.props.buses);
     return (
-      <div>
+      <React.Fragment>
+        <BusDetailHeader />
         <li className="bus-detail">
           <div>
             <div className="bus-box">
@@ -38,7 +21,7 @@ class BusInfo extends Component {
               </div>
               <div className="col-two">
                 <div className="departure b-color f-size">
-                  <span>{this.props.buses.departure}</span>
+                  <span>{this.props.buses.departure.substr(0, 5)}</span>
                 </div>
                 <div className="source">
                   <span className="txt-color">
@@ -53,14 +36,10 @@ class BusInfo extends Component {
               </div>
               <div className="col-four">
                 <div className="arival b-color f-size">
-                  <span>
-                    {this.props.buses.arrival}
-                    {/* {this.props.buses.length !== 0 &&
-                      this.props.buses[0].arrival.substr(11, 5)} */}
-                  </span>
+                  <span>{this.props.buses.arrival.substr(0, 5)}</span>
                 </div>
                 <div className="arival-date">
-                  <span>{this.props.buses.busNumber}</span>
+                  <span>{this.props.buses.dateOfDeparture.substr(5, 6)}</span>
                 </div>
                 <div className="dest">
                   <span className="txt-color">
@@ -108,9 +87,9 @@ class BusInfo extends Component {
             />
           </div>
         </li>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BusInfo);
+export default BusInfo;

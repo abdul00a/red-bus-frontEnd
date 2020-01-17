@@ -5,7 +5,7 @@ import { reqBusDetail } from '../../../actions/businfo/businfo';
 
 const mapStateToProps = state => {
   return {
-    busDetail: state.BusDetail.busDetail
+    busDetail: state.BusDetail.filteredBuses
   };
 };
 const mapDispatchToProps = dispatch => {
@@ -41,7 +41,6 @@ class TripPlanner extends Component {
   };
 
   render() {
-    // console.log(this.props.busDetail);
     return (
       <div>
         {this.props.busDetail.map(ele => (

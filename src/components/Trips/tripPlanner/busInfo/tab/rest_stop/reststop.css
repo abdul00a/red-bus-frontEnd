@@ -1,7 +1,7 @@
 .stop-point {
   background-color: #f8f9fa;
   width: 100%;
-  margin-top: -1em;
+  margin-top: -1.1em;
   padding: 20px 30px;
 }
 .sp-cont {
@@ -26,19 +26,21 @@
   font-weight: 700;
 }
 .sp-subdetail {
-  margin-top: 16px;
+  margin: 17px 25px 0 0;
   border: 1px solid #174ba0;
-  width: 25%;
+  width: 95%;
   padding: 2em 3em 2em 3em;
   background-color: #e5ebf8;
 }
 .sp-tym {
   color: #323e5c;
-  font-size: 1.3em;
+  font-size: 1.45em;
   font-weight: 500;
 }
 .sp-m {
   margin-top: 10px;
+  color: #48b984;
+  font-size: 1.3em;
 }
 .road {
   color: #3e3e52;
@@ -46,4 +48,11 @@
   line-height: 18px;
   letter-spacing: 1px;
   word-break: break-word;
+}
+
+.sp-detail {
+  display: flex;
+}
+.stopageList {
+  margin-right: 2em;
 }
