@@ -8,7 +8,6 @@ import './Form.css';
 import {
   fetchCities,
   setDepartureDate,
-  setReturnDate,
   typeFrom,
   typeTo,
 } from '../../../actions/Search/Search';
@@ -94,7 +93,6 @@ const mapStateToProps = state => {
     toLocation:state.search.toLocation,
     departureDate: state.search.departureDate,
     modify:state.modify,
-    //returnDate: state.search.returnDate
   };
 };
 
@@ -105,26 +103,9 @@ const mapDispatchToProps = dispatch => {
     typeTo: location => dispatch(typeTo(location)),
     setDepartureDate: date => dispatch(setDepartureDate(date)),
     toggleModify: () => dispatch(toggleModify())
-    //setReturnDate: date => dispatch(setReturnDate(date))
   };
 };
 
 TripQueryForm = connect(mapStateToProps, mapDispatchToProps)(TripQueryForm);
 
 export default withRouter(TripQueryForm);
-
-
-
-
-
-
-
-
-
-
-
-
-// <DatePicker
-          //   onChange={this.onChangeReturn}
-          //   placeholder='Return date'
-          // />

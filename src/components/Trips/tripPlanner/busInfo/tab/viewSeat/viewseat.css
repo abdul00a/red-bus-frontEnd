@@ -1,0 +1,14 @@
+.seats-display-container {
+  background-color: #dfe0e2;
+  width: 100%;
+  margin-top: -1em;
+  display: flex;
+  padding-top: 1em;
+}
+.left-box {
+  width: 60%;
+}
+.right-box {
+  width: 36%;
+  margin: 10px 0 15px;
+}

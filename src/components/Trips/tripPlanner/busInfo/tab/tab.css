@@ -1,0 +1,31 @@
+.view-seat-btn {
+  border-radius: 0;
+  padding: 0 2em;
+  margin-top: 10px;
+}
+.ant-tabs {
+  width: 100%;
+  margin-top: -11px;
+  margin-bottom: -17px;
+}
+.ant-tabs-nav-container {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+}
+.ant-tabs-nav .ant-tabs-tab:last-child {
+  padding: 10px 4em 0 2em;
+}
+.ant-tabs-ink-bar {
+  background-color: #d84e55;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: #c53e44;
+}
+.ant-tabs-nav .ant-tabs-tab:hover {
+  color: #d84e55;
+}
+
+.upperTab {
+  width: 100%;
+}

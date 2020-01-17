@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Icon } from 'antd';
+import { Select } from 'antd';
 import { connect } from 'react-redux';
 import { setSearchSuggestions } from '../../../../actions/Search/Search';
 
@@ -29,7 +29,6 @@ class SelectComponent extends React.Component {
 
   render() {
     const options = this.props.searchSuggestions.map(city => <Option key={city.id}>{city.cityname}</Option>);
-    <Icon type="user" style={{ color: 'rgba(0,0,0,1)' }} />
     return (
       <Select
         showSearch

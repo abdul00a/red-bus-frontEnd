@@ -1,0 +1,85 @@
+.colBullet-css {
+  float: left;
+  width: 6%;
+}
+.colBpDp-css {
+  margin-left: 6%;
+  width: 94%;
+  font-size: 1.3em;
+}
+.t-planed{
+    margin-top: 1em;
+}
+.bd-head-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3e3e52;
+}
+.bpDpName-Lbl {
+  font-size: 18px;
+  color: #3e3e52;
+}
+.bpDpSummaryTm-Lbl {
+  font-weight: 700;
+  font-size: 16px;
+  float: right;
+}
+.selectedBpDpAdd-Lbl {
+  font-size: 14px;
+  color: #7e7e8c;
+  margin: 2px 0 24px;
+}
+.color-red-next-day {
+  color: #f04747;
+}
+.bk-desc {
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px #999898;
+  margin: 2em 0;
+  padding: 2em;
+}
+.seat-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.2em;
+  font-size: 1.3em;
+  color: #443e52;
+  font-weight: 600;
+  padding: 0.5em 0;
+  border-top: 2px solid #d8d8d8;
+}
+.f-d {
+  margin: 0 1.3em;
+  font-size: 1.3em;
+  color: #443e52;
+  font-weight: 600;
+  padding: 0.5em 0;
+  border-top: 2px solid #d8d8d8;
+}
+.am-pri {
+  font-size: 14px;
+  font-weight: 200;
+  color: #8f8f8f;
+  margin: 20px 1.2em 24px;
+}
+.f-disclimer {
+  color: #443e52;
+  font-size: 1.2em;
+}
+.fp-text {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: right;
+  color: #3e3e52;
+  float: right;
+}
+
+.process-payment{
+    height: 3em;
+    border-radius: unset;
+    background-color: #D8576E;
+    border: #D8576E;
+    width: 92%;
+    margin: -15px 22px 1.3em;
+}

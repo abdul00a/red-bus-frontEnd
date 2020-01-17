@@ -5,21 +5,10 @@ import Filters from './Filters/Filters';
 import queryString from 'query-string';
 import { cities } from '../../city.js';
 import './Trips.css';
-import { fetchSearchResults } from '../../actions/Search/Search';
+import TripPlanner from './tripPlanner/tripPlanner';
 
 class Trips extends Component {
-  componentDidMount = () => {
-    const { fromCityName, toCityName, departureDate } = queryString.parse(
-      this.props.location.search
-    );
-    this.props.fetchBuses(fromCityName, toCityName, departureDate);
-  };
-  componentDidUpdate = prevProps => {
-    if (!(this.props.fromCityName === prevProps.fromCityName && this.props.toCityName === prevProps.toCityName && this.props.departureDate === prevProps.departureDate)) {
-      console.log(prevProps)
-      this.props.fetchBuses(this.props.fromCityName, this.props.toCityName, this.props.departureDate);
-    }
-  };
+
   render() {
     const { fromCityName, toCityName, departureDate } = queryString.parse(
       this.props.location.search
@@ -32,9 +21,15 @@ class Trips extends Component {
           departureDate={departureDate}
           cities={cities}
         />
-        <div className='search-content'>
+        <div className="search-content">
           <Filters />
-          <div className='search-results'>O</div>
+          <div className="search-results">
+            <TripPlanner
+              fromCityName={fromCityName}
+              toCityName={toCityName}
+              departureDate={departureDate}
+            />
+          </div>
         </div>
       </React.Fragment>
     );
@@ -46,16 +41,12 @@ const mapStateToProps = state => {
     fromCityName: state.search.fromLocation,
     toCityName: state.search.toLocation,
     departureDate: state.search.departureDate,
-    // returnDate: state.search.returnDate,
     buses: state.search.buses
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-    fetchBuses: (fromCityName, toCityName, departureDate) =>
-      dispatch(fetchSearchResults(fromCityName, toCityName, departureDate))
-  };
+  return {};
 };
 
 Trips = connect(mapStateToProps, mapDispatchToProps)(Trips);

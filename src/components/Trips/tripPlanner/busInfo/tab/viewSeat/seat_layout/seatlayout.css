@@ -1,0 +1,32 @@
+.sub-left {
+  padding-top: 3em;
+}
+.seat-lbl {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 700;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.seatmsg{
+    background-color: #d84e55;
+    color: #fff;
+    padding: 3px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.seat-layt{
+    display: table;
+    margin: 0 auto;
+}
+.sub-layt{
+    padding: 0 10px;
+}
+.bookseat{
+  height: 220px;
+  width: 500px;
+  background-color: #fff;
+  margin-bottom: 3em;
+  border-left: 7px solid #777777;
+}
