@@ -12,8 +12,11 @@ class RestStop extends Component {
             <div className="sp-subdetail">
               <div className="sp-tym">Arrives at - 11:28 PM</div>
               <div className="sp-tym sp-m">Stops for 32 mins</div>
-              <div className="road">Grand Trunk Road;old NH1, Bari, Sonipat</div>
+              <div className="road">
+                Grand Trunk Road;old NH1, Bari, Sonipat
+              </div>
             </div>
+            
           </div>
         </div>
       </div>

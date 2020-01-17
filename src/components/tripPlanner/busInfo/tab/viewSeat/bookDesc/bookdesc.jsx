@@ -14,26 +14,26 @@ class Bookdesc extends Component {
                 <div className="circleBp"></div>
               </div>
               <div className="colBpDp-css">
-                <span class="bpDpName-Lbl">Majnu Ka Tila potala ground</span>
-                <span class="bpDpSummaryTm-Lbl">
+                <span className="bpDpName-Lbl">Majnu Ka Tila potala ground</span>
+                <span className="bpDpSummaryTm-Lbl">
                   21:30 <span class="color-red-next-day"></span>
                 </span>
-                <div class="selectedBpDpAdd-Lbl">
+                <div className="selectedBpDpAdd-Lbl">
                   Majnu Ka Tilla ,Potala ground taxi stand near new police
                   chowki majnu ka tilla,
                 </div>
               </div>
             </div>
-            <div class="margin-top-n-8">
-              <div class="colBullet-css">
-                <div class="circleDp"></div>
+            <div className="margin-top-n-8">
+              <div className="colBullet-css">
+                <div className="circleDp"></div>
               </div>
-              <div class="colBpDp-css pR">
-                <div class="bpDpNameTooltip">Chandigarh zirak pur flyo...</div>
-                <span class="bpDpSummaryTm-Lbl">
+              <div className="colBpDp-css pR">
+                <div className="bpDpNameTooltip">Chandigarh zirak pur flyo...</div>
+                <span className="bpDpSummaryTm-Lbl">
                   02:55 <span class="color-red-next-day">(17 Jan)</span>
                 </span>
-                <div class="selectedBpDpAdd-Lbl">
+                <div className="selectedBpDpAdd-Lbl">
                   Chandigarh zirak pur flyover{' '}
                 </div>
               </div>

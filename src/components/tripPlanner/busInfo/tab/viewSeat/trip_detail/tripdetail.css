@@ -3,7 +3,7 @@
   justify-content: space-between;
 }
 .bpdpAddr-css {
-  width: 70%;
+  width: 65%;
 }
 .ar-tym {
   font-weight: bolder;
@@ -61,12 +61,19 @@
 }
 .tabs {
   padding-top: 1em;
+  padding-bottom: 2em;
 }
-.continue-payment{
-    height: 3em;
-    border-radius: unset;
-    background-color: #D8576E;
-    border: #D8576E;
-    width: 92%;
-    margin: -15px 22px 1.3em;
+.continue-payment {
+  height: 3em;
+  border-radius: unset;
+  background-color: #ce3e59;
+  border: #d8576e;
+  width: 92%;
+  margin: -15px 22px 1.3em;
+}
+.ant-radio-group {
+  width: 100%;
+}
+.continue-payment:hover {
+  background-color: #da687d;
 }

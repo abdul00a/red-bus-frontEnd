@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './businfo.css';
 import { connect } from 'react-redux';
-import { reqBusDetail } from '../../actions/businfo/businfo';
-import Tab from '../tab/Tab';
+import { reqBusDetail } from '../../../actions/businfo/businfo';
+import Tab from './tab/Tab';
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     busDetail: state.BusDetail.busDetail
   };
@@ -17,13 +18,11 @@ const mapDispatchToProps = dispatch => {
 
 class BusInfo extends Component {
   componentDidMount() {
-    this.props.RequestBusDetail();
-    // fetch('https://radbus1001.herokuapp.com/city')
-    //   .then(res => res.json())
-    //   .then(data => console.log(data));
+    // this.props.RequestBusDetail();
   }
 
   render() {
+    // console.log(this.props.buses);
     return (
       <div>
         <li className="bus-detail">
@@ -31,57 +30,41 @@ class BusInfo extends Component {
             <div className="bus-box">
               <div className="col-one">
                 <div className="bus-name b-color">
-                  <span>
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].busName}
-                  </span>
+                  <span>{this.props.buses.busName}</span>
                 </div>
                 <div className="bus-type">
-                  <span className="txt-color">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].busType}
-                  </span>
+                  <span className="txt-color">{this.props.buses.busType}</span>
                 </div>
               </div>
               <div className="col-two">
                 <div className="departure b-color f-size">
-                  <span>
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].departure.substr(11, 5)}
-                  </span>
+                  <span>{this.props.buses.departure}</span>
                 </div>
                 <div className="source">
                   <span className="txt-color">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].routeTable.startingPoint}
+                    {this.props.buses.routeTable.startingPoint}
                   </span>
                 </div>
               </div>
               <div className="col-three">
                 <div className="duration">
-                  <span className="txt-color">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].duration}
-                  </span>
+                  <span className="txt-color">{this.props.buses.duration}</span>
                 </div>
               </div>
               <div className="col-four">
                 <div className="arival b-color f-size">
                   <span>
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].arrival.substr(11, 5)}
+                    {this.props.buses.arrival}
+                    {/* {this.props.buses.length !== 0 &&
+                      this.props.buses[0].arrival.substr(11, 5)} */}
                   </span>
                 </div>
                 <div className="arival-date">
-                  <span>
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].arrival.substr(0, 10)}
-                  </span>
+                  <span>{this.props.buses.busNumber}</span>
                 </div>
                 <div className="dest">
                   <span className="txt-color">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].routeTable.endingPoint}
+                    {this.props.buses.routeTable.endingPoint}
                   </span>
                 </div>
               </div>
@@ -89,27 +72,28 @@ class BusInfo extends Component {
                 <div className="price">
                   INR
                   <span className="b-color f-size">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].startingPrice}
+                    {this.props.buses.startingPrice}
                   </span>
                 </div>
               </div>
               <div className="col-six">
                 <div className="total-seat seats">
                   <span className="n-seat">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].seatFareList.filter(
-                        e => e.isBooked === 'Yes'
-                      ).length}
+                    {
+                      this.props.buses.seatFareList.filter(
+                        e => e.isBooked !== 'False'
+                      ).length
+                    }
                   </span>
                   <span className="seat-txt">Seats available</span>
                 </div>
                 <div className="win-seat seats">
                   <span className="n-seat">
-                    {this.props.busDetail.length !== 0 &&
-                      this.props.busDetail[0].seatFareList.filter(
+                    {
+                      this.props.buses.seatFareList.filter(
                         e => e.isWindowSeat === 'Yes'
-                      ).length}
+                      ).length
+                    }
                   </span>
                   <span className="seat-txt">Window</span>
                 </div>
@@ -118,17 +102,9 @@ class BusInfo extends Component {
           </div>
           <div className="bottom-div">
             <Tab
-              idBus={
-                this.props.busDetail.length !== 0 && this.props.busDetail[0].busNumber
-              }
-              keyVal={
-                this.props.busDetail.length !== 0 && this.props.busDetail[0].key
-              }
-              bdpoint={
-                this.props.busDetail.length === 0
-                  ? []
-                  : this.props.busDetail[0].routeTable.routePoint
-              }
+              idBus={this.props.buses.busNumber}
+              keyVal={this.props.buses.key}
+              bdpoint={this.props.buses.routeTable}
             />
           </div>
         </li>

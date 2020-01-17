@@ -6,6 +6,7 @@
 .ant-tabs {
   width: 100%;
   margin-top: -11px;
+  margin-bottom: -17px;
 }
 .ant-tabs-nav-container {
   display: flex;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './tripdetail.css';
-import { Tabs, Radio,Button } from 'antd';
+import { Tabs, Radio, Button } from 'antd';
 import BpList from './bp_list/bpList';
 import DpList from './dp_list/dpList';
 const { TabPane } = Tabs;
@@ -31,7 +31,11 @@ class TripDetail extends Component {
                           onChange={this.onChange}
                           value={this.state.value}
                         >
-                          <BpList />
+                          {this.props.bdInfo.routePoint
+                            .filter(ele => ele.pointType === 'Boarding')
+                            .map((ele, i) => (
+                              <BpList bdInfo={ele} key={ele.id} index={i} />
+                            ))}
                         </Radio.Group>
                       </ul>
                     </div>
@@ -40,7 +44,9 @@ class TripDetail extends Component {
                       <span className="fareDisclaimer">
                         ( Taxes will be calculated during payment )
                       </span>
-                      <span className="fare-value">INR 699.0</span>
+                      <span className="fare-value">
+                        INR {this.props.bdInfo.startingPrice}.00
+                      </span>
                     </div>
                   </TabPane>
                   <div></div>
@@ -52,7 +58,11 @@ class TripDetail extends Component {
                           onChange={this.onChange}
                           value={this.state.value}
                         >
-                          <DpList />
+                          {this.props.bdInfo.routePoint
+                            .filter(ele => ele.pointType !== 'Boarding')
+                            .map((ele, i) => (
+                              <DpList bdInfo={ele} key={ele.id} index={i} />
+                            ))}
                         </Radio.Group>
                       </ul>
                     </div>
@@ -61,9 +71,13 @@ class TripDetail extends Component {
                       <span className="fareDisclaimer">
                         ( Taxes will be calculated during payment )
                       </span>
-                      <span className="fare-value">INR 699.0</span>
+                      <span className="fare-value">
+                        INR {this.props.bdInfo.startingPrice}.00
+                      </span>
                     </div>
-                    <Button type="primary" className="d-li continue-payment">CONTINUE</Button>
+                    <Button type="primary" className="d-li continue-payment">
+                      CONTINUE
+                    </Button>
                   </TabPane>
                 </Tabs>
               </div>

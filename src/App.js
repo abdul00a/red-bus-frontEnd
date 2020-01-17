@@ -1,7 +1,8 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './App.css';
-import BusInfo from './components/busInfo/BusInfo';
+// import BusInfo from './components/busInfo/BusInfo';
+import Tripplanner from './components/tripPlanner/tripPlanner';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -15,7 +16,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route path="/" exact component={BusInfo} />
+          <Route path="/" exact component={Tripplanner} />
           {/* <Route path="/board/:id/:name" component={List} /> */}
         </Switch>
       </Router>

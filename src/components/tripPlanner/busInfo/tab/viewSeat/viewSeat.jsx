@@ -7,7 +7,7 @@ import BookDesc from './bookDesc/bookdesc';
 
 class ViewSeat extends Component {
   state = {
-    val: true
+    val: false
   };
 
   handle = e => {
@@ -20,7 +20,11 @@ class ViewSeat extends Component {
           <SeatLayout value={this.handle} />
         </div>
         <div className="right-box">
-          {this.state.val ? <TripDetail /> && <BookDesc /> : <SeatLegend />}
+          {this.state.val ? (
+            <BookDesc /> && <TripDetail bdInfo={this.props.bdInfo} />
+          ) : (
+            <SeatLegend />
+          )}
         </div>
       </div>
     );
