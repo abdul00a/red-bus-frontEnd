@@ -9,39 +9,39 @@ class Booking_policy extends Component {
         <div>
           <Row className="poly-head">
             <Col span={12}>Time of Cancellation</Col>
-            <Col span={4}>Deduction Percentage</Col>
-            <Col span={8}>Cancellation Charges</Col>
+            <Col span={6}>Deduction Percentage</Col>
+            <Col span={6}>Cancellation Charges</Col>
           </Row>
           <div className="poly-detail">
             <Row className="sub-detail">
               <Col span={12}>Before 6 Days</Col>
-              <Col span={4}>10%</Col>
-              <Col span={8}>₹130 / 160 / 200</Col>
+              <Col span={6}>10%</Col>
+              <Col span={6}>₹130 / 160 / 200</Col>
             </Row>
             <Row className="sub-detail">
               <Col span={12}>Before 5 days</Col>
-              <Col span={4}>10%</Col>
-              <Col span={8}>₹130 / 160 / 200</Col>
+              <Col span={6}>10%</Col>
+              <Col span={6}>₹130 / 160 / 200</Col>
             </Row>
             <Row className="sub-detail">
               <Col span={12}>Before 4 days</Col>
-              <Col span={4}>10%</Col>
-              <Col span={8}>₹130 / 160 / 200</Col>
+              <Col span={6}>10%</Col>
+              <Col span={6}>₹130 / 160 / 200</Col>
             </Row>
             <Row className="sub-detail">
               <Col span={12}>Before 3 days</Col>
-              <Col span={4}>25%</Col>
-              <Col span={8}>₹325 / 400 / 500</Col>
+              <Col span={6}>25%</Col>
+              <Col span={6}>₹325 / 400 / 500</Col>
             </Row>
             <Row className="sub-detail">
               <Col span={12}>Before 2 Days</Col>
-              <Col span={4}>50%</Col>
-              <Col span={8}>₹650 / 800 / 1000</Col>
+              <Col span={6}>50%</Col>
+              <Col span={6}>₹650 / 800 / 1000</Col>
             </Row>
             <Row className="sub-detail">
               <Col span={12}>Before 1 Days</Col>
-              <Col span={4}>75%</Col>
-              <Col span={8}>₹1299 / 1599 / 1999</Col>
+              <Col span={6}>75%</Col>
+              <Col span={6}>₹1299 / 1599 / 1999</Col>
             </Row>
           </div>
         </div>

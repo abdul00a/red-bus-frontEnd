@@ -30,16 +30,16 @@ class Tab extends Component {
     ).length;
     return (
       <Tabs activeKey={this.props.keyVal || '0'} onTabClick={this.handleTab}>
-        <TabPane tab="Bording & Droping" key="1">
+        <TabPane tab="Boarding & Dropping" key="1">
           <BD bdpoint={this.props.bdpoint}></BD>
         </TabPane>
         <TabPane tab="Booking Policy" key="2">
           <Policy />
         </TabPane>
-        <TabPane tab={'Rest Stop(' + numStop + ')'} key="3">
+        <TabPane tab={'Rest Stop (' + numStop + ')'} key="3">
           <RestStop stopage={this.props.bdpoint} numStop={numStop} />
         </TabPane>
-        <TabPane tab="View Seat" key="4" className="bttn-seat">
+        <TabPane tab="View Seats" key="4" className="bttn-seat">
           <ViewSeat bdInfo={this.props.bdpoint} />
         </TabPane>
       </Tabs>

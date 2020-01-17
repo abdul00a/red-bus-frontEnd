@@ -1,4 +1,12 @@
 .bus-route-head {
-  margin: 2em 0 0 3.5em;
-  color: black;
+  margin: 2em 0 0 2.5em;
+  color: #3e3e52;
+  font-weight: 600;
+  text-shadow: -1px 0 1.5px #707095;
+}
+.t-duration {
+  margin-left: 2.5em;
+}
+.ant-col-4 {
+  width: 12.666667%;
 }

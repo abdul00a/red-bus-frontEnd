@@ -12,10 +12,10 @@
   width: 25%;
 }
 .col-two {
-  width: 15%;
+  width: 12%;
 }
 .col-three {
-  width: 10%;
+  width: 13%;
 }
 .col-four {
   width: 15%;
@@ -70,6 +70,7 @@
 }
 .duration {
   font-size: 1.3em;
+  margin-top: -3px;
 }
 .bus-type {
   margin-top: 1.143em;
