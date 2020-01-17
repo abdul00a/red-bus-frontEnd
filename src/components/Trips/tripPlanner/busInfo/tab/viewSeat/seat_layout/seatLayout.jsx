@@ -16,10 +16,9 @@ class SeatLayout extends Component {
             <div className="bookseat">
               <div className="seat-checkbox">
                 {this.props.seatInfo.map(ele => (
-                  <BusSeat seats={ele} key={ele.id} />
+                  <BusSeat seats={ele} key={ele.id} togle={this.props.value} />
                 ))}
               </div>
-              {/* <input type="checkbox" onChange={this.props.value} /> */}
             </div>
           </div>
         </div>

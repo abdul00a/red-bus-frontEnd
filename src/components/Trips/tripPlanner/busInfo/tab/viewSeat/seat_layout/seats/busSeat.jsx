@@ -7,7 +7,7 @@ class BusSeat extends Component {
       return (
         <div className="seater-box">
           <label className="seater">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={this.props.togle} />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -16,7 +16,7 @@ class BusSeat extends Component {
       return (
         <div className="sleeper-box">
           <label className="sleeper">
-            <input type="checkbox" />
+            <input type="checkbox" onChange={this.props.togle} />
             <span className="checkmark2"></span>
           </label>
         </div>

@@ -11,7 +11,7 @@ class TripHeader extends Component {
       <React.Fragment>
       <div className="trip-header">
         <div className='info'>{this.props.fromCityName}</div>
-        <span class="from-to-arr"><Icon type="arrow-right" /></span>
+        <span className="from-to-arr"><Icon type="arrow-right" /></span>
         <div className='info'>{this.props.toCityName}</div>
         <div className='depart-date'><Icon type="calendar" />{this.props.departureDate}</div>
         <Button className='modify-btn' onClick={this.props.toggleModify}>Modify</Button>

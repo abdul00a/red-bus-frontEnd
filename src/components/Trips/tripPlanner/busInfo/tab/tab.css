@@ -14,10 +14,11 @@
   font-weight: 700;
 }
 .ant-tabs-nav .ant-tabs-tab:last-child {
-  padding: 10px 4em 0 2em;
+  padding: 10px 5em 0 3em;
 }
 .ant-tabs-ink-bar {
   background-color: #d84e55;
+
 }
 .ant-tabs-nav .ant-tabs-tab-active {
   color: #c53e44;
@@ -28,4 +29,7 @@
 
 .upperTab {
   width: 100%;
+}
+.ant-tabs-nav .ant-tabs-tab {
+  margin: 0 50px 0 0;
 }

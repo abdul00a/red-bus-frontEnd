@@ -3,9 +3,9 @@ import './FilterItem.css';
 
 const FilterItem = (props) => {
     return ( 
-        <label class="filter-item">
+        <label className="filter-item">
             <input type="checkbox" />
-            <span class="custom-checkbox" />
+            <span className="custom-checkbox" />
             {props.filter}
         </label>
      );

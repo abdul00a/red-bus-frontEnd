@@ -49,7 +49,7 @@ class TripDetail extends Component {
                       </span>
                     </div>
                   </TabPane>
-                  <div></div>
+                  {/* <div></div> */}
                   <TabPane tab="DROPPING POINT" key="2">
                     <div>
                       <ul className="bd-inner-list d-li">
