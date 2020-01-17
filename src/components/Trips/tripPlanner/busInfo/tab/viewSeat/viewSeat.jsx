@@ -17,7 +17,7 @@ class ViewSeat extends Component {
     return (
       <div className="seats-display-container">
         <div className="left-box">
-          <SeatLayout value={this.handle} />
+          <SeatLayout value={this.handle} seatInfo={this.props.seatInfo} />
         </div>
         <div className="right-box">
           {this.state.val ? (

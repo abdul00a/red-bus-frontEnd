@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './seatlayout.css';
+import BusSeat from './seats/busSeat';
 
 class SeatLayout extends Component {
   render() {
@@ -13,7 +14,12 @@ class SeatLayout extends Component {
         <div className="seat-layt">
           <div className="sub-layt">
             <div className="bookseat">
-              <input type="checkbox" onChange={this.props.value}/>
+              <div className="seat-checkbox">
+                {this.props.seatInfo.map(ele => (
+                  <BusSeat seats={ele} key={ele.id} />
+                ))}
+              </div>
+              {/* <input type="checkbox" onChange={this.props.value} /> */}
             </div>
           </div>
         </div>

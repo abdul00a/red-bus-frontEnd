@@ -9,24 +9,30 @@
   position: relative;
   text-align: center;
 }
-.seatmsg{
-    background-color: #d84e55;
-    color: #fff;
-    padding: 3px 20px;
-    font-size: 15px;
-    font-weight: 400;
+.seatmsg {
+  background-color: #d84e55;
+  color: #fff;
+  padding: 3px 20px;
+  font-size: 15px;
+  font-weight: 400;
 }
-.seat-layt{
-    display: table;
-    margin: 0 auto;
+.seat-layt {
+  display: table;
+  margin: 0 auto;
 }
-.sub-layt{
-    padding: 0 10px;
+.sub-layt {
+  padding: 0 10px;
 }
-.bookseat{
+.bookseat {
   height: 220px;
   width: 500px;
   background-color: #fff;
   margin-bottom: 3em;
   border-left: 7px solid #777777;
+}
+
+.seat-checkbox {
+  padding: 15px 2.5em;
+  display: flex;
+  flex-wrap: wrap;
 }

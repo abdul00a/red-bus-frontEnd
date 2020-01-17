@@ -84,6 +84,7 @@ class BusInfo extends Component {
               idBus={this.props.buses.busNumber}
               keyVal={this.props.buses.key}
               bdpoint={this.props.buses.routeTable}
+              seatInfo={this.props.buses.seatFareList}
             />
           </div>
         </li>
