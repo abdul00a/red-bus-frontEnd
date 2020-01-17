@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import { Button, Icon } from 'antd';
 import { connect } from 'react-redux';
 import { toggleModify } from '../../../../actions/TripModifyForm/TripModifyForm';
+import './TripHeader.css';
 
 class TripHeader extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
+      <div className="trip-header">
         <div className='info'>{this.props.fromCityName}</div>
-        &rarr;
+        <span class="from-to-arr"><Icon type="arrow-right" /></span>
         <div className='info'>{this.props.toCityName}</div>
-        <div className='info'>&uarr;{this.props.departureDate}</div>
-        {this.props.returnDate&&<div className='info'>&darr; {this.props.returnDate}</div>}
+        <div className='depart-date'><Icon type="calendar" />{this.props.departureDate}</div>
         <Button className='modify-btn' onClick={this.props.toggleModify}>Modify</Button>
+        </div>
       </React.Fragment>
     );
   }

@@ -1,10 +1,11 @@
 .filter-item {
     display: block;
     position: relative;
+    padding: 5px;
     padding-left: 35px;
     margin: 10px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 15px;
     user-select: none;
     border-bottom: solid 1px rgba(175, 175, 175, 1);
     color: rgba(100, 100, 100, 1);

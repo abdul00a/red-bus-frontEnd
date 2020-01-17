@@ -1,12 +1,23 @@
 .location-header {
     display: flex;
-    font-size: 25px;
+    font-size: 18px;
     padding: 10px 50px 10px 50px;
     box-shadow: -2px 12px 10px rgba(0, 0, 0, 1);
+    height: 78.5px;
 }
 
 .modify-btn {
     position: relative;
-    top: 3px;
     margin-left: 10px
+}
+
+.from-to-arr {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.depart-date {
+    margin-left: 10px;
 }
