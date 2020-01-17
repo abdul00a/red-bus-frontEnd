@@ -2,9 +2,13 @@ import { REQUEST_BUS_DETAIL } from '../constant';
 
 // export const reqBusDetail = () => ({ type: REQUEST_BUS_DETAIL, payload: data });
 
-export const reqBusDetail = () => dispatch => {
+export const reqBusDetail = (
+  fromCityName,
+  toCityName,
+  departureDate
+) => dispatch => {
   fetch(
-    `https://violetbus.herokuapp.com/search?fromCityName=Indore&toCityName=Delhi&departureDate=2020-01-15&returnDate`
+    `https://violetbus.herokuapp.com/search?fromCityName=${fromCityName}&toCityName=${toCityName}&departureDate=${departureDate}&returnDate`
   )
     .then(response => response.json())
     .then(data => dispatch({ type: REQUEST_BUS_DETAIL, payload: data }));

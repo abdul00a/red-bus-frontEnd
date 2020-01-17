@@ -1,0 +1,19 @@
+.ant-menu-item {
+    color: rgba(255, 0, 0, 1);
+}
+
+.ant-menu-item-selected {
+    color: rgba(255, 0, 0, 1) !important;
+    border-bottom: 2px solid rgba(255, 0, 0, 1) !important;
+    font-weight: bold !important;
+}
+
+.logo {
+    width: 71.25px;
+    height: 37.5px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    background-size: 71.25px 37.5px;
+    background-image: url(../../assets/images/logo.png);
+    display: inline-block;
+}

@@ -1,0 +1,12 @@
+.search-content {
+    display: flex;
+}
+
+.search-results {
+    height: 45.1vw;
+    width: 75vw;
+    padding: 50px;
+    background: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+}

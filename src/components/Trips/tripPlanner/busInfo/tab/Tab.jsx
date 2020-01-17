@@ -4,7 +4,7 @@ import './tab.css';
 import BD from './bording_dropping/boarding_dropping';
 import Policy from './booking_policy/booking_policy';
 import { connect } from 'react-redux';
-import { tabToggle } from '../../../../actions/tab/toggle';
+import { tabToggle } from '../../../../../actions/tab/toggle';
 import RestStop from './rest_stop/restStop';
 import ViewSeat from './viewSeat/viewSeat';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './businfo.css';
 import { connect } from 'react-redux';
-import { reqBusDetail } from '../../../actions/businfo/businfo';
+import { reqBusDetail } from '../../../../actions/businfo/businfo';
 import Tab from './tab/Tab';
 
 const mapStateToProps = state => {
