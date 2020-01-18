@@ -3,7 +3,7 @@ import './FilterItem.css';
 
 const FilterItem = (props) => {
     return ( 
-        <label className="filter-item">
+        <label className="filter-item" onClick={(event)=>props.onToggle(event.target.checked)}>
             <input type="checkbox" />
             <span className="custom-checkbox" />
             {props.filter}

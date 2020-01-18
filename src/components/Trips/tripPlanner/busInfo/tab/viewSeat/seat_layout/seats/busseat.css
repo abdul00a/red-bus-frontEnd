@@ -1,128 +1,132 @@
 /*Seater*/
 
 .seater {
-  display: inline-block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 22px;
-  user-select: none;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
 }
 
 .seater input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0px;
-  width: 0px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
 }
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  background: none;
-  border: solid 1px rgba(125, 125, 125, 1);
-  border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: solid 1px rgba(125, 125, 125, 1);
+    border-radius: 2px;
 }
 
-.seater:hover input ~ .checkmark {
-  background-color: rgba(255, 255, 255, 1);
+.seater:hover input~.checkmark {
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.seater input:checked ~ .checkmark {
-  background: none;
+.seater input:checked~.checkmark {
+    background: none;
 }
 
 .checkmark:after {
-  content: '';
-  position: absolute;
+    content: '';
+    position: absolute;
 }
 
-.seater input:checked ~ .checkmark {
-  background-color: rgba(150, 150, 150, 1);
+.seater input:checked~.checkmark {
+    background-color: rgba(150, 150, 150, 1);
 }
 
-.seater input:checked ~ .checkmark:after {
-  background-color: rgba(150, 150, 150, 1);
+.seater input:checked~.checkmark:after {
+    background-color: rgba(150, 150, 150, 1);
 }
 
 .seater .checkmark:after {
-  left: -7px;
-  top: 4.5px;
-  width: 24px;
-  height: 18px;
-  border: solid rgb(125, 125, 125);
-  border-width: 1px 1px 1px 1px;
-  background-color: rgba(255, 255, 255, 1);
+    left: -7px;
+    top: 4.5px;
+    width: 24px;
+    height: 18px;
+    border: solid rgb(125, 125, 125);
+    border-width: 1px 1px 1px 1px;
+    background-color: rgba(255, 255, 255, 1);
 }
+
+
 /*Sleeper*/
 
 .sleeper {
-  display: inline-block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 22px;
-  user-select: none;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
 }
 
 .sleeper input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0px;
-  width: 0px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0px;
+    width: 0px;
 }
 
 .checkmark2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 60px;
-  background: none;
-  border: solid 1px rgba(125, 125, 125, 1);
-  border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 60px;
+    background: none;
+    border: solid 1px rgba(125, 125, 125, 1);
+    border-radius: 2px;
 }
 
-.sleeper:hover input ~ .checkmark2 {
-  background-color: rgba(255, 255, 255, 1);
+.sleeper:hover input~.checkmark2 {
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.sleeper input:checked ~ .checkmark2 {
-  background: none;
+.sleeper input:checked~.checkmark2 {
+    background: none;
 }
 
 .checkmark2:after {
-  content: '';
-  position: absolute;
+    content: '';
+    position: absolute;
 }
 
-.sleeper input:checked ~ .checkmark2 {
-  background-color: rgba(150, 150, 150, 1);
+.sleeper input:checked~.checkmark2 {
+    background-color: rgba(150, 150, 150, 1);
 }
 
-.sleeper input:checked ~ .checkmark2:after {
-  background-color: rgba(150, 150, 150, 1);
+.sleeper input:checked~.checkmark2:after {
+    background-color: rgba(150, 150, 150, 1);
 }
 
 .sleeper .checkmark2:after {
-  left: -7px;
-  top: 4.5px;
-  width: 48px;
-  height: 18px;
-  border: solid rgb(125, 125, 125);
-  border-width: 1px 1px 1px 1px;
-  background-color: rgba(255, 255, 255, 1);
+    left: 46px;
+    top: 4.5px;
+    width: 8px;
+    height: 18px;
+    border: solid rgb(125, 125, 125);
+    border-width: 1px 1px 1px 1px;
+    background-color: rgba(255, 255, 255, 1);
 }
+
 .seater-box {
-  margin: 0 2em 2em 1em;
+    margin: 0 2em 2em 1em;
 }
+
 .sleeper-box {
-  margin: 0 3em 2em 0.5em;
+    margin: 0 3em 2em 0.5em;
 }
