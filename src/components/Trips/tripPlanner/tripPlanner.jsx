@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BusInfo from './busInfo/BusInfo';
 import { reqBusDetail } from '../../../actions/businfo/businfo';
+import { filterRemove } from '../../../actions/filters/filters';
 
 const mapStateToProps = state => {
   return {
-    busDetail: state.BusDetail.filteredBuses
+    busDetail: state.BusDetail.filteredBuses,
+    filters: state.BusDetail.filters,
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    RequestBusDetail: (fromCityName, toCityName, departureDate) =>
-      dispatch(reqBusDetail(fromCityName, toCityName, departureDate))
+    RequestBusDetail: (fromCityName, toCityName, departureDate) =>dispatch(reqBusDetail(fromCityName, toCityName, departureDate)),
+    filterRemove: (filters)=>dispatch(filterRemove(filters))
+    
   };
 };
 
@@ -31,12 +34,15 @@ class TripPlanner extends Component {
         this.props.departureDate === prevProps.departureDate
       )
     ) {
-      console.log(prevProps);
       this.props.RequestBusDetail(
         this.props.fromCityName,
         this.props.toCityName,
         this.props.departureDate
       );
+    }
+    if(this.props.filters.length<prevProps.filters.length)
+    {
+      this.props.filterRemove(this.props.filters);
     }
   };
 

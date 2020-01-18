@@ -1,13 +1,22 @@
 .search-content {
-  display: flex;
+    display: flex;
 }
 
 .search-results {
-  height: 43.9vw;
-  width: 75vw;
-  padding: 10px;
-  background: none;
-  color: rgba(255, 255, 255, 1);
-  font-size: 20px;
-  overflow: auto;
+    height: 43.9vw;
+    width: 75vw;
+    padding: 10px;
+    background: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    overflow: auto;
+}
+
+.search-results::-webkit-scrollbar {
+    background: none;
+    height: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 200, 200, 0.7);
 }

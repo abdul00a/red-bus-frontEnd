@@ -16,7 +16,7 @@ class SelectComponent extends React.Component {
     if (value) {
        this.props.setSearchSuggestions(this.props.cities.filter(city=>{
         let testStr =new RegExp(`^${value.toLowerCase()}`);
-        return(testStr.test(city.cityname.toLowerCase()));
+        return(testStr.test(city.cityName.toLowerCase()));
       })) ;
     } else {
       this.props.setSearchSuggestions([])
@@ -24,11 +24,11 @@ class SelectComponent extends React.Component {
   };
 
   handleChange = value => {
-    this.props.typeLocation(this.props.searchSuggestions.filter(suggestion=>suggestion.id===parseInt(value))[0].cityname)
+    this.props.typeLocation(this.props.searchSuggestions.filter(suggestion=>suggestion.id===parseInt(value))[0].cityName)
   };
 
   render() {
-    const options = this.props.searchSuggestions.map(city => <Option key={city.id}>{city.cityname}</Option>);
+    const options = this.props.searchSuggestions.map(city => <Option key={city.id}>{city.cityName}</Option>);
     return (
       <Select
         showSearch
