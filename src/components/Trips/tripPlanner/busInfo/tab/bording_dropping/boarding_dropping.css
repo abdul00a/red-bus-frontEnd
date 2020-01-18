@@ -19,14 +19,13 @@
   width: 18%;
   font-weight: 700;
   vertical-align: top;
-  font-size: 13px;
+  font-size: 15px;
 }
 .BD-info .loc {
-  width: 78%;
   word-wrap: break-word;
   display: inline-block;
   vertical-align: middle;
-  font-size: 13.5px;
+  font-size: 14.5px;
 }
 .boarding {
   width: 50%;
@@ -36,12 +35,11 @@
 }
 
 .bd-box {
-  padding: 1.3em 0 0 10em;
+  padding: 1.3em 0 0 8em;
 }
 
 .bpdplist {
   column-count: 2;
-  list-style-type: none;
 }
 .bd-time {
   padding-right: 1em;

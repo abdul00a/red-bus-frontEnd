@@ -5,7 +5,14 @@ const DpList = props => {
   return (
     <li className="selectdb-list" key="100">
       <div className="radio-css">
-        <Radio value={props.index}></Radio>
+        <Radio
+          dpObj={{
+            dptime: props.bdInfo.departureTime.substr(0, 5),
+            dppoint: props.bdInfo.pointName,
+            dplandmark: props.bdInfo.landMark
+          }}
+          value={props.index}
+        ></Radio>
       </div>
       <div className="bpdpTime-css">
         <span className="ar-tym">

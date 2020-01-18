@@ -3,6 +3,7 @@ import './seatlayout.css';
 import BusSeat from './seats/busSeat';
 
 class SeatLayout extends Component {
+  
   render() {
     return (
       <div className="sub-left">
@@ -16,7 +17,7 @@ class SeatLayout extends Component {
             <div className="bookseat">
               <div className="seat-checkbox">
                 {this.props.seatInfo.map(ele => (
-                  <BusSeat seats={ele} key={ele.id} togle={this.props.value} />
+                  <BusSeat seats={ele} key={ele.id} toggle={this.props.value} />
                 ))}
               </div>
             </div>

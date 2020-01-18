@@ -50,6 +50,14 @@
   background-color: rgba(150, 150, 150, 1);
 }
 
+.seater input:disabled ~ .checkmark {
+  background-color: rgb(209, 209, 209);
+}
+
+.seater input:disabled ~ .checkmark:after {
+  background-color: rgb(209, 209, 209);
+}
+
 .seater .checkmark:after {
   left: -7px;
   top: 4.5px;
@@ -109,6 +117,14 @@
 
 .sleeper input:checked ~ .checkmark2:after {
   background-color: rgba(150, 150, 150, 1);
+}
+
+.sleeper input:disabled ~ .checkmark2 {
+  background-color: rgb(209, 209, 209);
+}
+
+.sleeper input:disabled ~ .checkmark2:after {
+  background-color: rgb(209,209,209);
 }
 
 .sleeper .checkmark2:after {

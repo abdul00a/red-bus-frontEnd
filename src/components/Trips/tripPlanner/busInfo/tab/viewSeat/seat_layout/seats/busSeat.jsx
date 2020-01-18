@@ -7,8 +7,12 @@ class BusSeat extends Component {
       return (
         <div className="seater-box">
           <label className="seater">
-            <input type="checkbox" onChange={this.props.togle} />
-            <span className="checkmark"></span>
+            <input
+              type="checkbox"
+              onChange={this.props.toggle}
+              value={this.props.seats.seatName}
+            />
+            <span className="checkmark" style={{}}></span>
           </label>
         </div>
       );
@@ -16,7 +20,12 @@ class BusSeat extends Component {
       return (
         <div className="sleeper-box">
           <label className="sleeper">
-            <input type="checkbox" onChange={this.props.togle} />
+            <input
+              type="checkbox"
+              onChange={this.props.toggle}
+              value={this.props.seats.seatName}
+              // disabled={true}
+            />
             <span className="checkmark2"></span>
           </label>
         </div>

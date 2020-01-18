@@ -3,20 +3,39 @@ import './tripdetail.css';
 import { Tabs, Radio, Button } from 'antd';
 import BpList from './bp_list/bpList';
 import DpList from './dp_list/dpList';
+import { connect } from 'react-redux';
+import { boardingPoints } from '../../../../../../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
+import { droppingPoints } from '../../../../../../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
+
 const { TabPane } = Tabs;
 
+const mapStateToProps = state => {
+  return {
+    selectedBp: state.bpdpReducer.selectedBp,
+    selectedDp: state.bpdpReducer.selectedDp,
+    bpDetail: state.bpdpReducer.bpDetail,
+    dpDetail: state.bpdpReducer.dpDetail
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    RequestBoardingPoints: event => dispatch(boardingPoints(event)),
+    RequestDroppingPoints: event => dispatch(droppingPoints(event))
+  };
+};
+
 class TripDetail extends Component {
-  state = {
-    value: 1
+  handleBpPoint = e => {
+    this.props.RequestBoardingPoints(e.target);
   };
 
-  onChange = e => {
-    console.log('radio checked', e.target.value);
-    this.setState({
-      value: e.target.value
-    });
+  handleDpPoint = e => {
+    this.props.RequestDroppingPoints(e.target);
   };
+
   render() {
+    console.log(this.props.bpDetail);
+    console.log(this.props.dpDetail);
     return (
       <div>
         <div>
@@ -28,8 +47,8 @@ class TripDetail extends Component {
                     <div>
                       <ul className="bd-inner-list">
                         <Radio.Group
-                          onChange={this.onChange}
-                          value={this.state.value}
+                          onChange={this.handleBpPoint}
+                          value={this.props.selectedBp}
                         >
                           {this.props.bdInfo.routePoint
                             .filter(ele => ele.pointType === 'Boarding')
@@ -49,13 +68,12 @@ class TripDetail extends Component {
                       </span>
                     </div>
                   </TabPane>
-                  {/* <div></div> */}
                   <TabPane tab="DROPPING POINT" key="2">
                     <div>
                       <ul className="bd-inner-list d-li">
                         <Radio.Group
-                          onChange={this.onChange}
-                          value={this.state.value}
+                          onChange={this.handleDpPoint}
+                          value={this.props.selectedDp}
                         >
                           {this.props.bdInfo.routePoint
                             .filter(ele => ele.pointType !== 'Boarding')
@@ -88,4 +106,4 @@ class TripDetail extends Component {
   }
 }
 
-export default TripDetail;
+export default connect(mapStateToProps, mapDispatchToProps)(TripDetail);
