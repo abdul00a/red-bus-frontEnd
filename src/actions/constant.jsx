@@ -24,5 +24,5 @@ export const ARRIVE_6_12 = 'ARRIVE_6_12';
 export const ARRIVE_12_18 = 'ARRIVE_12_18';
 export const ARRIVE_AFTER_18 = 'ARRIVE_AFTER_18';
 export const RESET_FILTERS = 'RESET_FILTERS';
-export const TOGGLE_BOOK_DESC = 'TOGGLE_BOOK_DESC'
+// export const TOGGLE_BOOK_DESC = 'TOGGLE_BOOK_DESC'
 export const TOGGLE_TRIP_PLANNER = 'TOGGLE_TRIP_PLANNER'

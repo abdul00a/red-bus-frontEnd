@@ -42,7 +42,6 @@
 .seat-box {
   display: flex;
   justify-content: space-between;
-  margin: 0 1.2em;
   font-size: 1.3em;
   color: #443e52;
   font-weight: 600;
@@ -50,7 +49,6 @@
   border-top: 2px solid #d8d8d8;
 }
 .f-d {
-  margin: 0 1.3em;
   font-size: 1.3em;
   color: #443e52;
   font-weight: 600;
@@ -61,7 +59,7 @@
   font-size: 14px;
   font-weight: 200;
   color: #8f8f8f;
-  margin: 20px 1.2em 24px;
+  margin: 5px 0 24px 0;
 }
 .f-disclimer {
   color: #443e52;
@@ -69,7 +67,7 @@
 }
 .fp-text {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   text-align: right;
   color: #3e3e52;
   float: right;
@@ -78,19 +76,30 @@
 .process-payment {
   height: 3em;
   border-radius: unset;
-  background-color: #d8576e;
+  background-color: #c73a54;
   border: #d8576e;
-  width: 92%;
-  margin: -15px 22px 1.3em;
+  width: 100%;
+  margin: -15px 0 0.3em 0;
 }
+
 .bd-book-desc-head {
   display: flex;
   justify-content: space-between;
 }
 .change-bdpoint {
   cursor: pointer;
-  color: #443e52;
+  color: #637ad0;
 }
 .change-bdpoint:hover {
   color: #f04747;
+}
+.process-payment:hover {
+  transition: 1s ease-in-out;
+  background-color: #db5577;
+}
+
+.process-payment:focus {
+  color: #fff;
+  background-color: #c73a54;
+  border-color: #d8576e;
 }

@@ -40,7 +40,11 @@ class Tab extends Component {
           <RestStop stopage={this.props.bdpoint} numStop={numStop} />
         </TabPane>
         <TabPane tab="View Seats" key="4" className="bttn-seat">
-          <ViewSeat bdInfo={this.props.bdpoint} seatInfo={this.props.seatInfo}/>
+          <ViewSeat
+            bdInfo={this.props.bdpoint}
+            seatInfo={this.props.seatInfo}
+            journeyDate={this.props.journeyDate}
+          />
         </TabPane>
       </Tabs>
     );

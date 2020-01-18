@@ -12,8 +12,7 @@ class BusSeat extends Component {
               onChange={event =>
                 this.props.toggle(event.target.checked, this.props.seats)
               }
-              // value={this.props.seats.seatPrice}
-              // name={this.props.seats.seatName}
+              disabled={this.props.seats.isBooked !== 'False' ? true : false}
             />
             <span className="checkmark" style={{}}></span>
           </label>
@@ -26,9 +25,9 @@ class BusSeat extends Component {
             <input
               type="checkbox"
               onChange={event =>
-                this.props.toggle(event.target.checked, this.props.seats)}
-              // value={this.props.seats.seatPrice}
-              // name={this.props.seats.seatName}
+                this.props.toggle(event.target.checked, this.props.seats)
+              }
+              disabled={this.props.seats.isBooked !== 'False' ? true : false}
             />
             <span className="checkmark2"></span>
           </label>

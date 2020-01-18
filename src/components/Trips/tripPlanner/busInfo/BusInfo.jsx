@@ -16,7 +16,11 @@ class BusInfo extends Component {
                   <span>{this.props.buses.busName}</span>
                 </div>
                 <div className="bus-type">
-                  <span className="txt-color">{`${this.props.buses.busType} / ${this.props.buses.sleeperAvailable?"Sleeper / Seater":"Seater"}`}</span>
+                  <span className="txt-color">{`${this.props.buses.busType} / ${
+                    this.props.buses.sleeperAvailable
+                      ? 'Sleeper / Seater'
+                      : 'Seater'
+                  }`}</span>
                 </div>
               </div>
               <div className="col-two">
@@ -85,6 +89,7 @@ class BusInfo extends Component {
               keyVal={this.props.buses.key}
               bdpoint={this.props.buses.routeTable}
               seatInfo={this.props.buses.seatFareList}
+              journeyDate={this.props.buses.dateOfDeparture}
             />
           </div>
         </li>
