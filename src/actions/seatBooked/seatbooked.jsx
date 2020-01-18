@@ -1,6 +1,7 @@
 import { REQUEST_SEATS } from '../constant';
 
-export const numOfSeats = event => ({
+export const numOfSeats = (checked, seatObj) => ({
   type: REQUEST_SEATS,
-  payload: event
+  payload: checked,
+  seatObj: seatObj
 });

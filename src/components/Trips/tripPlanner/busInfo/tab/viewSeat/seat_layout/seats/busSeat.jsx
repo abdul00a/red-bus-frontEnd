@@ -9,8 +9,11 @@ class BusSeat extends Component {
           <label className="seater">
             <input
               type="checkbox"
-              onChange={this.props.toggle}
-              value={this.props.seats.seatName}
+              onChange={event =>
+                this.props.toggle(event.target.checked, this.props.seats)
+              }
+              // value={this.props.seats.seatPrice}
+              // name={this.props.seats.seatName}
             />
             <span className="checkmark" style={{}}></span>
           </label>
@@ -22,9 +25,10 @@ class BusSeat extends Component {
           <label className="sleeper">
             <input
               type="checkbox"
-              onChange={this.props.toggle}
-              value={this.props.seats.seatName}
-              // disabled={true}
+              onChange={event =>
+                this.props.toggle(event.target.checked, this.props.seats)}
+              // value={this.props.seats.seatPrice}
+              // name={this.props.seats.seatName}
             />
             <span className="checkmark2"></span>
           </label>
