@@ -4,13 +4,15 @@ import TripModifyFormReducer from './TripModifyFormReducer/TripModifyFormReducer
 import { BusDetail } from './businfo/businfo_reducer';
 import { seatBooked } from './seatBookedReducer/seatReducer';
 import { bpdpReducer } from './bookedBoardingDroppingReducer/bookedBoarding';
+import bookingsFormReducer from './BookingsFormReducer/BookingsFormReducer';
 
 const rootReducer = combineReducers({
   search: searchReducer,
   modify: TripModifyFormReducer,
   BusDetail: BusDetail,
   seatBooked: seatBooked,
-  bpdpReducer: bpdpReducer
+  bpdpReducer: bpdpReducer,
+  bookingsForm: bookingsFormReducer
 });
 
 export default rootReducer;

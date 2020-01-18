@@ -6,9 +6,9 @@ import queryString from 'query-string';
 import { cities } from '../../city.js';
 import './Trips.css';
 import TripPlanner from './tripPlanner/tripPlanner';
+import BookingForm from './BookingForm/BookingForm';
 
 class Trips extends Component {
-
   render() {
     const { fromCityName, toCityName, departureDate } = queryString.parse(
       this.props.location.search
@@ -21,9 +21,9 @@ class Trips extends Component {
           departureDate={departureDate}
           cities={cities}
         />
-        <div className="search-content">
+        <div className='search-content'>
           <Filters />
-          <div className="search-results">
+          <div className='search-results'>
             <TripPlanner
               fromCityName={fromCityName}
               toCityName={toCityName}
@@ -31,6 +31,7 @@ class Trips extends Component {
             />
           </div>
         </div>
+        <BookingForm />
       </React.Fragment>
     );
   }
