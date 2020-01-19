@@ -3,7 +3,6 @@ import './seatlayout.css';
 import BusSeat from './seats/busSeat';
 
 class SeatLayout extends Component {
-  
   render() {
     // console.log(this.props.seatInfo)
     return (
@@ -17,9 +16,15 @@ class SeatLayout extends Component {
           <div className="sub-layt">
             <div className="bookseat">
               <div className="seat-checkbox">
-                {this.props.seatInfo.map(ele => (
-                  <BusSeat seats={ele} key={ele.id} toggle={this.props.value} />
-                ))}
+                {this.props.idBus === this.props.selectedBus
+                  ? this.props.seatInfo.map(ele => (
+                      <BusSeat
+                        seats={ele}
+                        key={ele.id}
+                        toggle={this.props.value}
+                      />
+                    ))
+                  : ''}
               </div>
             </div>
           </div>

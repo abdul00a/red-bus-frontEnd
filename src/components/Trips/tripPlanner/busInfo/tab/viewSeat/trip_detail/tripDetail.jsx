@@ -7,7 +7,6 @@ import DpList from './dp_list/dpList';
 const { TabPane } = Tabs;
 
 class TripDetail extends Component {
-
   render() {
     return (
       <div>
@@ -85,7 +84,7 @@ class TripDetail extends Component {
                           : false
                       }
                       onClick={this.props.booking}
-                      value={true}
+                      value={'true'}
                     >
                       CONTINUE
                     </Button>

@@ -1,36 +1,8 @@
-import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS } from "../constant"
+import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS, TYPE_PASSENGER_F_NAME, TYPE_PASSENGER_L_NAME, TYPE_PASSENGER_GENDER, TYPE_PASSENGER_AGE } from "../constant"
 
 export const toggleDisplayBookingsForm =()=>{
     return{
         type:TOGGLE_DISPLAY_BOOKINGS_FORM,
-    }
-}
-
-export const typeFName = (fName) => {
-    return{
-        type:TYPE_F_NAME,
-        fName:fName,
-    }
-}
-
-export const typeLName = (lName) => {
-    return{
-        type:TYPE_L_NAME,
-        lName:lName,
-    }
-}
-
-export const typeGender = (gender) =>{
-    return{
-        type:TYPE_GENDER,
-        gender:gender,
-    }
-}
-
-export const typeAge = (age) => {
-    return{
-        type:TYPE_AGE,
-        age:age,
     }
 }
 
@@ -52,5 +24,37 @@ export const populateSeats=(seats)=>{
     return{
         type:POPULATE_SEATS,
         seats:seats,
+    }
+}
+
+export const typePassengerFName = (fName, seatId) => {
+    return{
+        type:TYPE_PASSENGER_F_NAME,
+        fName:fName,
+        seatId:seatId,
+    }
+}
+
+export const typePassengerLName = (lName, seatId) => {
+    return{
+        type:TYPE_PASSENGER_L_NAME,
+        lName:lName,
+        seatId:seatId,
+    }
+}
+
+export const typePassengerGender = (gender, seatId) => {
+    return{
+        type:TYPE_PASSENGER_GENDER,
+        gender:gender,
+        seatId:seatId,
+    }
+}
+
+export const typePassengerAge = (age, seatId) => {
+    return{
+        type:TYPE_PASSENGER_AGE,
+        age:age,
+        seatId:seatId,
     }
 }

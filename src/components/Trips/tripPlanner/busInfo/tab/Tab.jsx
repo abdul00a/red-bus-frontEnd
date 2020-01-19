@@ -4,23 +4,41 @@ import './tab.css';
 import BD from './bording_dropping/boarding_dropping';
 import Policy from './booking_policy/booking_policy';
 import { connect } from 'react-redux';
-import { tabToggle } from '../../../../../actions/tab/toggle';
+import { tabToggle, closeTab } from '../../../../../actions/tab/toggle';
 import RestStop from './rest_stop/restStop';
 import ViewSeat from './viewSeat/viewSeat';
+import { resetNumOfSeats } from '../../../../../actions/seatBooked/seatbooked';
+import { resetTripPlanner } from '../../../../../actions/tripPlanner/tripPlanner';
+import { resetBoardingPoints } from '../../../../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
+import { resetDroppingPoints } from '../../../../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
 
 const { TabPane } = Tabs;
 
-const mapStateToProps = () => {
-  return {};
+const mapStateToProps = state => {
+  return {
+    selectedBus: state.BusDetail.selectedBus
+  };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    RequestingKey: (keyVal, busNum) => dispatch(tabToggle(keyVal, busNum))
+    RequestingKey: (keyVal, busNum) => dispatch(tabToggle(keyVal, busNum)),
+    closeTab: busNum => dispatch(closeTab(busNum)),
+    ResetBusSeats: () => dispatch(resetNumOfSeats()),
+    ResetToggleTripPlanner: () => dispatch(resetTripPlanner()),
+    ResetBoardingPoints: () => dispatch(resetBoardingPoints()),
+    ResetDroppingPoints: () => dispatch(resetDroppingPoints())
   };
 };
 
 class Tab extends Component {
   handleTab = e => {
+    if (this.props.idBus !== this.props.selectedBus) {
+      this.props.closeTab(this.props.selectedBus);
+      this.props.ResetBoardingPoints();
+      this.props.ResetBusSeats();
+      this.props.ResetToggleTripPlanner();
+      this.props.ResetDroppingPoints();
+    }
     this.props.RequestingKey(e, this.props.idBus);
   };
 
@@ -44,6 +62,8 @@ class Tab extends Component {
             bdInfo={this.props.bdpoint}
             seatInfo={this.props.seatInfo}
             journeyDate={this.props.journeyDate}
+            selectedBus={this.props.selectedBus}
+            idBus={this.props.idBus}
           />
         </TabPane>
       </Tabs>

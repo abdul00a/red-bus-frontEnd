@@ -1,0 +1,24 @@
+.payment-layout {
+  display: flex;
+}
+.pay-box {
+  width: 80%;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 23px;
+  margin: 0 0 16px 25px;
+}
+.rccs__card {
+  height: 250.873px;
+  width: 420px;
+}
+.rccs {
+  width: 420px;
+}
+.expiry {
+  display: flex;
+  width: 85.8%;
+}
+*:focus {
+  outline: none;
+}

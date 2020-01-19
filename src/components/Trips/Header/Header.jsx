@@ -11,6 +11,9 @@ class Header extends Component {
             <div className="location-header">
                 {!this.props.modify&&<TripHeader fromCityName={this.props.fromCityName} toCityName={this.props.toCityName} departureDate={this.props.departureDate} returnDate={this.props.returnDate} />}
                 {this.props.modify&&<TripQueryForm />}
+                <div className="header-panorama">
+                <div className="panorama-bus" />
+                </div>
             </div>
          );
     }

@@ -11,6 +11,7 @@ import {
   typeFrom,
   typeTo,
 } from '../../../actions/Search/Search';
+import { resetAnimateBus, animateBus } from '../../../actions/animateBus/animateBus';
 
 class TripQueryForm extends Component {
   componentDidMount = () => {
@@ -46,7 +47,11 @@ class TripQueryForm extends Component {
       alert('Please fill in the departure date.');
       return(0);
     }
-    this.props.history.push(`/search?fromCityName=${this.props.fromLocation}&toCityName=${this.props.toLocation}&departureDate=${this.props.departureDate}`);
+    this.props.busDepart();
+    setTimeout(()=>{
+      this.props.history.push(`/search?fromCityName=${this.props.fromLocation}&toCityName=${this.props.toLocation}&departureDate=${this.props.departureDate}`);
+      this.props.busReset()
+    },1100)
     if(this.props.modify)
     {
       this.props.toggleModify();
@@ -98,6 +103,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    busDepart: ()=> dispatch(animateBus()),
+    busReset: ()=>dispatch(resetAnimateBus()),
     fetchCities: () => dispatch(fetchCities()),
     typeFrom: location => dispatch(typeFrom(location)),
     typeTo: location => dispatch(typeTo(location)),

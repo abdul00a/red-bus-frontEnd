@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './bookdesc.css';
+import { connect } from 'react-redux';
 import { Button } from 'antd';
+import { toggleDisplayBookingsForm } from '../../../../../../../actions/BookingsForm/BookingsForm';
 
 class Bookdesc extends Component {
   render() {
-    console.log(this.props.numOfSeat);
-    console.log(this.props.bpDetail);
-    console.log(this.props.dpDetail);
     return (
       <div className="bk-desc">
         <div>
@@ -77,7 +76,7 @@ class Bookdesc extends Component {
               <div>Taxes will be calculated during payment</div>
             </div>
           </div>
-          <Button type="primary" className="process-payment">
+          <Button type="primary" className="process-payment" onClick={this.props.displayBookingForm}>
             PROCEED TO BOOK
           </Button>
         </div>
@@ -85,5 +84,17 @@ class Bookdesc extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) =>{
+  return{}
+}
+
+const mapDispatchToProps = (dispatch) =>{
+  return{
+    displayBookingForm:()=>dispatch(toggleDisplayBookingsForm()),
+  }
+}
+
+Bookdesc=connect(mapStateToProps,mapDispatchToProps)(Bookdesc);
 
 export default Bookdesc;

@@ -1,6 +1,77 @@
 .hero {
-    background-image: url(../../assets/images/Combined.png);
+    background-image: url(../../assets/images/cover.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: 17vw 29vw 17vw 29vw;
+    padding: 20vw 29vw 20vw 29vw;
+}
+
+.bus-prop {
+    background-image: url(../../assets/images/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 785px;
+    left: 1100px;
+    background-size: 180px 94.5px;
+    width: 180px;
+    height: 94.5px;
+    animation-name: bus;
+    animation-duration: 3s;
+}
+
+@keyframes bus {
+    0% {
+        left: -10000px;
+    }
+    100% {
+        left: 1100px;
+    }
+}
+
+@keyframes bus-depart {
+    0% {
+        left: 1100px;
+    }
+    100% {
+        left: 2000px;
+    }
+}
+
+.sun-prop {
+    background-image: url(../../assets/images/sun.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    animation-name: sun;
+    animation-duration: 3s;
+}
+
+@keyframes sun {
+    0% {
+        top: -1000px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+.road {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(125, 125, 125, 1);
+    left: 0;
+    top: 861px;
+}
+
+.divider {
+    border: dashed;
+    border-color: rgba(255, 255, 255, 1);
+    margin: 50px;
+}
+
+*.focus {
+    outline: none;
 }
