@@ -2,9 +2,10 @@ import { REQUEST_BUS_DETAIL } from '../../actions/constant';
 import { filterReducer } from './filterResults/filterResults';
 
 const initialState = {
+  selectedBus: '',
   busDetail: [],
   filteredBuses: [],
-  filters:[],
+  filters: []
 };
 
 export const BusDetail = (state = initialState, action) => {
@@ -15,6 +16,6 @@ export const BusDetail = (state = initialState, action) => {
       });
       return { ...state, busDetail: buses, filteredBuses: buses };
     default:
-      return{...filterReducer(state,action)}
+      return { ...filterReducer(state, action) };
   }
 };

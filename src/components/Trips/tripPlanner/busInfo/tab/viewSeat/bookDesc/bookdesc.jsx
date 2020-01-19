@@ -4,9 +4,6 @@ import { Button } from 'antd';
 
 class Bookdesc extends Component {
   render() {
-    console.log(this.props.numOfSeat);
-    console.log(this.props.bpDetail);
-    console.log(this.props.dpDetail);
     return (
       <div className="bk-desc">
         <div>

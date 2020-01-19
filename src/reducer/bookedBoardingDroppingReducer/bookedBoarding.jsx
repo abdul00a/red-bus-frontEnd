@@ -1,6 +1,7 @@
 import {
   REQUEST_BOARDING_BOOKED,
-  REQUEST_DROPPING_BOOKED
+  REQUEST_DROPPING_BOOKED,
+  RESET_SEATS
 } from '../../actions/constant';
 
 const initialState = {
@@ -24,6 +25,8 @@ export const bpdpReducer = (state = initialState, action) => {
         selectedDp: action.payload.value,
         dpDetail: action.payload.dpObj
       };
+    case RESET_SEATS:
+      return initialState;
     default:
       return state;
   }

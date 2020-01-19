@@ -7,14 +7,14 @@ import { filterRemove } from '../../../actions/filters/filters';
 const mapStateToProps = state => {
   return {
     busDetail: state.BusDetail.filteredBuses,
-    filters: state.BusDetail.filters,
+    filters: state.BusDetail.filters
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    RequestBusDetail: (fromCityName, toCityName, departureDate) =>dispatch(reqBusDetail(fromCityName, toCityName, departureDate)),
-    filterRemove: (filters)=>dispatch(filterRemove(filters))
-    
+    RequestBusDetail: (fromCityName, toCityName, departureDate) =>
+      dispatch(reqBusDetail(fromCityName, toCityName, departureDate)),
+    filterRemove: filters => dispatch(filterRemove(filters))
   };
 };
 
@@ -40,8 +40,7 @@ class TripPlanner extends Component {
         this.props.departureDate
       );
     }
-    if(this.props.filters.length<prevProps.filters.length)
-    {
+    if (this.props.filters.length < prevProps.filters.length) {
       this.props.filterRemove(this.props.filters);
     }
   };

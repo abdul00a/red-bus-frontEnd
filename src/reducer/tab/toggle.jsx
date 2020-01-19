@@ -1,4 +1,4 @@
-import { TOGGLE_TABS } from '../../actions/constant';
+import { TOGGLE_TABS, CLOSE_TABS } from '../../actions/constant';
 
 const initialState = ''
   
@@ -10,6 +10,8 @@ export const toggleKey = (state = initialState, action) => {
       } else {
         return  action.payload ;
       }
+    case CLOSE_TABS:
+      return '0'
     default:
       return state;
   }

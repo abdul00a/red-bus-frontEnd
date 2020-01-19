@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
   search: searchReducer,
   modify: TripModifyFormReducer,
   BusDetail: BusDetail,
+  // selectedBus
   seatBooked: seatBooked,
   bpdpReducer: bpdpReducer,
   tripPlan: tripPlan

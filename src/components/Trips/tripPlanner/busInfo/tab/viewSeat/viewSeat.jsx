@@ -5,10 +5,18 @@ import SeatLegend from './seat_legend/seatLegend';
 import TripDetail from './trip_detail/tripDetail';
 import BookDesc from './bookDesc/bookdesc';
 import { connect } from 'react-redux';
-import { numOfSeats } from '../../../../../../actions/seatBooked/seatbooked';
-import { tripPlanner } from '../../../../../../actions/tripPlanner/tripPlanner';
-import { boardingPoints } from '../../../../../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
-import { droppingPoints } from '../../../../../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
+import {
+  numOfSeats,
+} from '../../../../../../actions/seatBooked/seatbooked';
+import {
+  tripPlanner,
+} from '../../../../../../actions/tripPlanner/tripPlanner';
+import {
+  boardingPoints,
+} from '../../../../../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
+import {
+  droppingPoints,
+} from '../../../../../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
 
 const mapStateToProps = state => {
   return {
@@ -26,7 +34,8 @@ const mapDispatchToProps = dispatch => {
       dispatch(numOfSeats(checked, seatObj)),
     ToggleTripPlanner: value => dispatch(tripPlanner(value)),
     RequestBoardingPoints: event => dispatch(boardingPoints(event)),
-    RequestDroppingPoints: event => dispatch(droppingPoints(event))
+    RequestDroppingPoints: event => dispatch(droppingPoints(event)),
+    
   };
 };
 
@@ -55,7 +64,7 @@ class ViewSeat extends Component {
     return (
       <div className="seats-display-container">
         <div className="left-box">
-          <SeatLayout value={this.handleSeat} seatInfo={this.props.seatInfo} />
+          <SeatLayout idBus={this.props.idBus} selectedBus={this.props.selectedBus} value={this.handleSeat} seatInfo={this.props.seatInfo} />
         </div>
         <div className="right-box">
           {this.props.numOfSeat.length > 0 ? (
