@@ -3,38 +3,12 @@ import './tripdetail.css';
 import { Tabs, Radio, Button } from 'antd';
 import BpList from './bp_list/bpList';
 import DpList from './dp_list/dpList';
-import { connect } from 'react-redux';
-import { boardingPoints } from '../../../../../../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
-import { droppingPoints } from '../../../../../../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
 
 const { TabPane } = Tabs;
 
-const mapStateToProps = state => {
-  return {
-    selectedBp: state.bpdpReducer.selectedBp,
-    selectedDp: state.bpdpReducer.selectedDp,
-    bpDetail: state.bpdpReducer.bpDetail,
-    dpDetail: state.bpdpReducer.dpDetail
-  };
-};
-const mapDispatchToProps = dispatch => {
-  return {
-    RequestBoardingPoints: event => dispatch(boardingPoints(event)),
-    RequestDroppingPoints: event => dispatch(droppingPoints(event))
-  };
-};
-
 class TripDetail extends Component {
-  handleBpPoint = e => {
-    this.props.RequestBoardingPoints(e.target);
-  };
-
-  handleDpPoint = e => {
-    this.props.RequestDroppingPoints(e.target);
-  };
 
   render() {
-    // console.log(this.props.numOfSeat);
     return (
       <div>
         <div>
@@ -46,7 +20,7 @@ class TripDetail extends Component {
                     <div>
                       <ul className="bd-inner-list">
                         <Radio.Group
-                          onChange={this.handleBpPoint}
+                          onChange={this.props.boardPoint}
                           value={this.props.selectedBp}
                         >
                           {this.props.bdInfo.routePoint
@@ -76,7 +50,7 @@ class TripDetail extends Component {
                     <div>
                       <ul className="bd-inner-list d-li">
                         <Radio.Group
-                          onChange={this.handleDpPoint}
+                          onChange={this.props.droppingPoint}
                           value={this.props.selectedDp}
                         >
                           {this.props.bdInfo.routePoint
@@ -126,4 +100,5 @@ class TripDetail extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TripDetail);
+export default TripDetail;
+// export default connect(mapStateToProps, mapDispatchToProps)(TripDetail);

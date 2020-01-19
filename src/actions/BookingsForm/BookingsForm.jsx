@@ -1,4 +1,4 @@
-import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_F_NAME, TYPE_L_NAME, TYPE_GENDER, TYPE_AGE, TYPE_PHONE, TYPE_E_MAIL } from "../constant"
+import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS } from "../constant"
 
 export const toggleDisplayBookingsForm =()=>{
     return{
@@ -45,5 +45,12 @@ export const typeEMail = (eMail) => {
     return{
         type:TYPE_E_MAIL,
         eMail:eMail,
+    }
+}
+
+export const populateSeats=(seats)=>{
+    return{
+        type:POPULATE_SEATS,
+        seats:seats,
     }
 }
