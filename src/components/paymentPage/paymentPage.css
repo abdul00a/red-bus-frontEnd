@@ -1,24 +1,48 @@
-.payment-layout {
+.payment-logo {
+  background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/9/99/PayU_Corporate_Logo.png/220px-PayU_Corporate_Logo.png');
+  background-repeat: no-repeat;
+  padding: 4em;
+  margin: 2em 9em;
+}
+.select-payment-method {
+  width: 22%;
+  margin-left: 20em;
+  margin-right: 5em;
+}
+.pay-options {
   display: flex;
 }
-.pay-box {
-  width: 80%;
-  padding: 9px 15px;
+.select-pay {
+  margin: 0 auto;
+}
+.pay-text {
+  font-size: 3em;
+  color: #999999;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: 2px -4px 5px #999999;
+  margin-bottom: 0.6em;
+}
+.op-payment {
+  width: 70%;
   border: none;
-  border-radius: 23px;
-  margin: 0 0 16px 25px;
+  padding: 0.5em 0;
+  font-size: 1.5em;
+  line-height: 16px;
+  color: #243b46;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: #e9e9e9;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  margin-left: 3em;
 }
-.rccs__card {
-  height: 250.873px;
-  width: 420px;
+
+.op-payment:hover {
+  background-color: #ec7878;
+  color: #ffffff;
 }
-.rccs {
-  width: 420px;
-}
-.expiry {
-  display: flex;
-  width: 85.8%;
-}
-*:focus {
-  outline: none;
+.deb {
+  pointer-events: none;
+ 
 }

@@ -9,6 +9,7 @@ import NavBar from './components/NavBar/NavBar';
 import Trips from './components/Trips/Trips';
 import './App.css';
 import rootReducer from './reducer/rootReducer';
+import PaymentPage from './components/paymentPage/paymentPage'
 
 const store = createStore(rootReducer,applyMiddleware(thunkMiddleware));
 
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/search' component={Trips} />
+          <Route path='/payment' component={PaymentPage} />
         </Switch>
       </BrowserRouter>
       </Provider>
