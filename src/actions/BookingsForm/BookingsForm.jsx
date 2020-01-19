@@ -41,7 +41,7 @@ export const typePhone = (phone) => {
     }
 }
 
-export const typeEMail = (email) => {
+export const typeEMail = (eMail) => {
     return{
         type:TYPE_E_MAIL,
         eMail:eMail,

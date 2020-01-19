@@ -5,13 +5,13 @@ const bookingsFormReducer = (state={ display:false, fName:'', lName:'', gender:'
         case TOGGLE_DISPLAY_BOOKINGS_FORM:
             return{...state, display:!state.display}
         case TYPE_F_NAME:
-            return{...state, fName:action.fname}
+            return{...state, fName:action.fName}
         case TYPE_L_NAME:
             return{...state, lName:action.lName}
         case TYPE_GENDER:
             return{...state, gender:action.gender}
         case TYPE_AGE:
-            return{...state, age:state.age}
+            return{...state, age:action.age}
         case TYPE_PHONE:
             return{...state, phone:action.phone}
         case TYPE_E_MAIL:

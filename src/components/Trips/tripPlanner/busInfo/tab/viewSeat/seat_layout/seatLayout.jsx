@@ -5,6 +5,7 @@ import BusSeat from './seats/busSeat';
 class SeatLayout extends Component {
   
   render() {
+    // console.log(this.props.seatInfo)
     return (
       <div className="sub-left">
         <div className="seat-lbl">

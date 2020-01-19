@@ -31,3 +31,5 @@ export const TYPE_GENDER = 'TYPE_GENDER';
 export const TYPE_AGE = 'TYPE_AGE';
 export const TYPE_PHONE = 'TYPE_PHONE';
 export const TYPE_E_MAIL = 'TYPE_E_MAIL';
+export const TOGGLE_BOOK_DESC = 'TOGGLE_BOOK_DESC'
+export const TOGGLE_TRIP_PLANNER = 'TOGGLE_TRIP_PLANNER'

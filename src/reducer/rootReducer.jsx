@@ -5,6 +5,7 @@ import { BusDetail } from './businfo/businfo_reducer';
 import { seatBooked } from './seatBookedReducer/seatReducer';
 import { bpdpReducer } from './bookedBoardingDroppingReducer/bookedBoarding';
 import bookingsFormReducer from './BookingsFormReducer/BookingsFormReducer';
+import { tripPlan } from './tripPlannerReducer/tripPlanner';
 
 const rootReducer = combineReducers({
   search: searchReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   BusDetail: BusDetail,
   seatBooked: seatBooked,
   bpdpReducer: bpdpReducer,
-  bookingsForm: bookingsFormReducer
+  bookingsForm: bookingsFormReducer,
+  tripPlan: tripPlan,
 });
 
 export default rootReducer;

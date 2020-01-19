@@ -34,8 +34,7 @@ class TripDetail extends Component {
   };
 
   render() {
-    console.log(this.props.bpDetail);
-    console.log(this.props.dpDetail);
+    // console.log(this.props.numOfSeat);
     return (
       <div>
         <div>
@@ -64,7 +63,12 @@ class TripDetail extends Component {
                         ( Taxes will be calculated during payment )
                       </span>
                       <span className="fare-value">
-                        INR {this.props.bdInfo.startingPrice}.00
+                        INR{' '}
+                        {this.props.numOfSeat.reduce((acc, cur) => {
+                          acc = acc + +cur.seatPrice;
+                          return acc;
+                        }, 0)}
+                        .00
                       </span>
                     </div>
                   </TabPane>
@@ -89,10 +93,26 @@ class TripDetail extends Component {
                         ( Taxes will be calculated during payment )
                       </span>
                       <span className="fare-value">
-                        INR {this.props.bdInfo.startingPrice}.00
+                        INR{' '}
+                        {this.props.numOfSeat.reduce((acc, cur) => {
+                          acc = acc + +cur.seatPrice;
+                          return acc;
+                        }, 0)}
+                        .00
                       </span>
                     </div>
-                    <Button type="primary" className="d-li continue-payment">
+                    <Button
+                      type="primary"
+                      className="d-li continue-payment"
+                      disabled={
+                        Object.entries(this.props.bpDetail).length === 0 ||
+                        Object.entries(this.props.dpDetail).length === 0
+                          ? true
+                          : false
+                      }
+                      onClick={this.props.booking}
+                      value={true}
+                    >
                       CONTINUE
                     </Button>
                   </TabPane>

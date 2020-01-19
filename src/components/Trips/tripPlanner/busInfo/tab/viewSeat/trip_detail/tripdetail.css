@@ -74,3 +74,6 @@
 .continue-payment:hover {
   background-color: #da687d;
 }
+.continue-payment:disabled {
+  cursor: not-allowed;
+}
