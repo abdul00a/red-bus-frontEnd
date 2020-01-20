@@ -24,12 +24,12 @@ class RestStop extends Component {
                     <div className="sp-tym sp-m">
                       Stops for{' '}
                       {(
-                        +ele.departureTime.substr(2, 2) -
-                        +ele.boardingTime.substr(2, 2)
+                        +ele.departureTime.substr(3, 2) -
+                        +ele.boardingTime.substr(3, 2)
                       ).toString()}{' '}
                       mins
                     </div>
-                    <div className="road">{ele.landMark}</div>
+                    <div className="landmark-point">{ele.landMark}</div>
                   </div>
                 </div>
               ))}

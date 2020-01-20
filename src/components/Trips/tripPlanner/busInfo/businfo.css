@@ -2,30 +2,45 @@
   border: 1px solid #dddddd;
   margin: 0 0 0 2em;
   padding-top: 1em;
+  border-bottom: 0;
   list-style-type: none;
 }
 .bus-box {
   display: flex;
   padding: 0 1.1em;
 }
-.col-one {
-  width: 25%;
+.bus-detail:hover {
+  box-shadow: -1px 3px 5px #dddddd;
 }
 .col-two {
-  width: 12%;
+  margin-left: 3px;
 }
 .col-three {
-  width: 13%;
+  margin-left: 33px;
 }
 .col-four {
-  width: 15%;
+  margin-left: 8px;
 }
 .col-five {
-  width: 15%;
+  margin-left: 2.9em;
 }
 .col-six {
-  width: 20%;
-  padding-left: 1.4em;
+  margin-left: 0.1em;
+}
+.col-seven {
+  margin-left: 0.2em;
+}
+.rating-text {
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 3px;
+  border-radius: 3px;
+}
+.ant-col-4 {
+  width: 12.7666667%;
+}
+.bus-row {
+  width: 100%;
 }
 .b-color {
   color: #3e3e52;
@@ -43,7 +58,6 @@
 }
 .price {
   font-size: 1em;
-  padding-left: 2em;
   color: #3e3e52;
 }
 .seats {

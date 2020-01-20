@@ -44,21 +44,21 @@ class BookingForm extends React.Component {
             <div className='contact-form'>
               <div className='input-box' id='phone-container'>
                 <input
-                  type='text'
-                  className='input-field'
-                  id='phone'
+                  type="text"
+                  className="input-field"
+                  id="phone"
                   onChange={event => this.props.typePhone(event.target.value)}
                 />
-                <label className='field-label'>PHONE</label>
+                <label className="field-label">PHONE</label>
               </div>
-              <div className='input-box' id='email-container'>
+              <div className="input-box" id="email-container">
                 <input
-                  type='email'
-                  className='input-field'
-                  id='email'
+                  type="email"
+                  className="input-field"
+                  id="email"
                   onChange={event => this.props.typeEMail(event.target.value)}
                 />
-                <label className='field-label'>EMAIL ADDRESS</label>
+                <label className="field-label">EMAIL ADDRESS</label>
               </div>
             </div>
           </form>
@@ -83,7 +83,7 @@ const mapDispatchToProps = dispatch => {
     populateSelectedSeats: seats => dispatch(populateSeats(seats)),
     typePhone: phone => dispatch(typePhone(phone)),
     typeEMail: eMail => dispatch(typeEMail(eMail)),
-    hideBookingForm: ()=>dispatch(toggleDisplayBookingsForm()),
+    hideBookingForm: () => dispatch(toggleDisplayBookingsForm())
   };
 };
 

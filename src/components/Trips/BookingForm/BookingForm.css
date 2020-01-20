@@ -5,10 +5,7 @@
 .field-label {
     display: block;
     color: rgba(53, 68, 99, 1);
-    position: relative;
     font-size: 0.8vw;
-    top: -2.1vw;
-    transition-duration: 200ms;
 }
 
 .contact-form {
@@ -29,10 +26,6 @@
     font-size: 0.8vw;
     border-bottom: solid 1px rgb(255, 0, 0, 1);
     margin-bottom: 2px;
-}
-
-.input-field:focus+label {
-    transform: translateY(-0.8vw);
 }
 
 #state {
