@@ -49,6 +49,8 @@ class PaymentCard extends Component {
             onChange={this.handleInputChange}
             onFocus={this.handleInputFocus}
             className="pay-box"
+            pattern="\d*"
+            maxlength="16"
           />
           <div className="expiry">
             <input
