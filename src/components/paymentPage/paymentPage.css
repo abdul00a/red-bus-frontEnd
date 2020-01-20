@@ -1,8 +1,10 @@
 .payment-logo {
-  background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/9/99/PayU_Corporate_Logo.png/220px-PayU_Corporate_Logo.png');
+  background-image: url(https://www.boipa.co.uk/wp-content/uploads/Payment-Gateway-Logo.png);
   background-repeat: no-repeat;
   padding: 4em;
   margin: 2em 9em;
+  width: 500px;
+  background-size: contain;
 }
 .select-payment-method {
   width: 22%;
@@ -17,7 +19,7 @@
 }
 .pay-text {
   font-size: 3em;
-  color: #999999;
+  color: #0470b8;
   text-align: center;
   font-weight: 800;
   text-shadow: 2px -4px 5px #999999;
@@ -44,5 +46,4 @@
 }
 .deb {
   pointer-events: none;
- 
 }
