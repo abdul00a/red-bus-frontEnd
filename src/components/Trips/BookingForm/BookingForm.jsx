@@ -31,34 +31,39 @@ class BookingForm extends React.Component {
           onOk={this.handleOk}
           onCancel={this.props.hideBookingForm}
           width='630px'
-          style={{right:"-637.5px"}}
+          style={{top:"0px",right:"-637.5px"}}
+          bodyStyle={{height:"860px"}}
           footer={
-            <Button htmlType='submit' className='trip-search-btn' type='danger'>
+            <Button htmlType='submit' onClick={this.proceedToPay} className='trip-search-btn' type='danger'>
               Proceed to pay
             </Button>
           }
         >
           <form onSubmit={this.proceedToPay} className="passenger-details">
-          <Icon type="user" /><span>Pasenger's Information</span>
-            {this.props.selectedSeats.map((seat)=><Passengers key={seat.id} seat={seat}/>)}
+          <span className="form-title"><Icon type="user" />&nbsp;Pasenger's Information</span>
+            {this.props.selectedSeats.map((seat,index)=><Passengers key={seat.id} index={index} seat={seat}/>)}
+            <div className="form-title"><Icon type="mail" />&nbsp;Contact Information</div>
             <div className='contact-form'>
               <div className='input-box' id='phone-container'>
+              <label className="field-label">PHONE</label>
                 <input
                   type="text"
                   className="input-field"
                   id="phone"
+                  placeholder="Phone"
                   onChange={event => this.props.typePhone(event.target.value)}
                 />
-                <label className="field-label">PHONE</label>
+                
               </div>
               <div className="input-box" id="email-container">
+              <label className="field-label">EMAIL ADDRESS</label>
                 <input
                   type="email"
                   className="input-field"
                   id="email"
+                  placeholder="E-mail"
                   onChange={event => this.props.typeEMail(event.target.value)}
                 />
-                <label className="field-label">EMAIL ADDRESS</label>
               </div>
             </div>
           </form>
