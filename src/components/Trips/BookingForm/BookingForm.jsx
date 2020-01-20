@@ -19,12 +19,12 @@ class BookingForm extends React.Component {
   };
 
   onChange(a, b, c) {
-  console.log(a, b, c);
-}
+    console.log(a, b, c);
+  }
 
-proceedToPay=()=>{
-  this.props.history.push('/payment')
-}
+  proceedToPay = () => {
+    this.props.history.push('/payment');
+  };
 
   render() {
     return (
@@ -34,38 +34,45 @@ proceedToPay=()=>{
           title="Passenger's Information"
           onOk={this.handleOk}
           onCancel={this.props.hideBookingForm}
-          width='630px'
+          width="630px"
           footer={[
-            <Button key='back' type='danger'>
+            <Button key="back" type="danger">
               Return
             </Button>,
-            <Button key='submit' htmlType='submit' type='primary'>
+            <Button
+              key="submit"
+              htmlType="submit"
+              onClick={this.proceedToPay}
+              type="primary"
+            >
               Submit
             </Button>
           ]}
         >
           <form onSubmit={this.proceedToPay}>
             <Carousel afterChange={this.onChange}>
-            {this.props.selectedSeats.map((seat)=><Passengers key={seat.id} seat={seat}/>)}
+              {this.props.selectedSeats.map(seat => (
+                <Passengers key={seat.id} seat={seat} />
+              ))}
             </Carousel>
-            <div className='contact-form'>
-              <div className='input-box' id='phone-container'>
+            <div className="contact-form">
+              <div className="input-box" id="phone-container">
                 <input
-                  type='text'
-                  className='input-field'
-                  id='phone'
+                  type="text"
+                  className="input-field"
+                  id="phone"
                   onChange={event => this.props.typePhone(event.target.value)}
                 />
-                <label className='field-label'>PHONE</label>
+                <label className="field-label">PHONE</label>
               </div>
-              <div className='input-box' id='email-container'>
+              <div className="input-box" id="email-container">
                 <input
-                  type='email'
-                  className='input-field'
-                  id='email'
+                  type="email"
+                  className="input-field"
+                  id="email"
                   onChange={event => this.props.typeEMail(event.target.value)}
                 />
-                <label className='field-label'>EMAIL ADDRESS</label>
+                <label className="field-label">EMAIL ADDRESS</label>
               </div>
             </div>
           </form>
@@ -90,7 +97,7 @@ const mapDispatchToProps = dispatch => {
     populateSelectedSeats: seats => dispatch(populateSeats(seats)),
     typePhone: phone => dispatch(typePhone(phone)),
     typeEMail: eMail => dispatch(typeEMail(eMail)),
-    hideBookingForm: ()=>dispatch(toggleDisplayBookingsForm()),
+    hideBookingForm: () => dispatch(toggleDisplayBookingsForm())
   };
 };
 

@@ -8,11 +8,12 @@
 .BD-info ul {
   font-size: 12px;
   font-weight: 400;
+  margin-top: 1.5em;
 }
 .BD-info h2 {
   color: #727272;
-  padding-left: 3em;
-  font-weight: 500;
+  padding-left: 2.6em;
+  font-weight: 600;
 }
 .BD-info .bd-time {
   padding-right: 15px;

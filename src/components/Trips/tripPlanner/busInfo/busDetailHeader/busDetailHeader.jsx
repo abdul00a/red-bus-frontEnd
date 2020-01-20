@@ -11,9 +11,10 @@ const BusDetailHeader = () => {
         <Col span={4} className="t-duration">
           Duration
         </Col>
-        <Col span={4} style={{ margin: '0 3.6em 0 0.2em' }}>
+        <Col span={2} style={{ margin: '0 3.6em 0 0.2em' }}>
           Arrival
         </Col>
+        <Col span={2}>Ratings</Col>
         <Col span={4}>Fare</Col>
         <Col span={4}>Seats Available</Col>
       </Row>
