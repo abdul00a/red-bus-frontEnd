@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './busseat.css';
 
+const style = {
+  backgroundColor: '#F1A9A0'
+};
+
 class BusSeat extends Component {
   render() {
     if (this.props.seats.seatType === 'Sitting') {
@@ -14,7 +18,10 @@ class BusSeat extends Component {
               }
               disabled={this.props.seats.isBooked !== 'False' ? true : false}
             />
-            <span className="checkmark" style={{}}></span>
+            <span
+              className="checkmark"
+              style={this.props.seats.bookingGender === 'Female' ? style : {}}
+            ></span>
           </label>
         </div>
       );
@@ -29,7 +36,10 @@ class BusSeat extends Component {
               }
               disabled={this.props.seats.isBooked !== 'False' ? true : false}
             />
-            <span className="checkmark2"></span>
+            <span
+              className="checkmark2"
+              style={this.props.seats.bookingGender === 'Female' ? style : {}}
+            ></span>
           </label>
         </div>
       );

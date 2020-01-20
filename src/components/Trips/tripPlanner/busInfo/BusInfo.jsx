@@ -23,7 +23,7 @@ class BusInfo extends Component {
           <div>
             <div className="bus-box">
               <Row className="bus-row">
-                <Col span={6} className="col-one">
+                <Col span={6}>
                   <div className="bus-name b-color">
                     <span>{this.props.buses.busName}</span>
                   </div>
@@ -72,18 +72,19 @@ class BusInfo extends Component {
                     <span
                       className="rating-text"
                       style={
-                        'four' === 'four'
+                        this.props.buses.busRating >= 4
                           ? rating4
-                          : '3' === '3'
+                          : this.props.buses.busRating >= 3
                           ? rating3
                           : rating1_2
                       }
                     >
-                      <Icon type="star" className="star" /> 4.2
+                      <Icon type="star" className="star" />{' '}
+                      {this.props.buses.busRating}
                     </span>
                   </div>
                 </Col>
-                <Col span={4} className="col-six">
+                <Col span={4}>
                   <div className="price">
                     INR
                     <span className="b-color f-size">
@@ -94,7 +95,11 @@ class BusInfo extends Component {
                 <Col span={4} className="col-seven">
                   <div className="total-seat seats">
                     <span className="n-seat">
-                      15
+                      {
+                        this.props.buses.seatFareList.filter(
+                          e => e.isBooked === 'False'
+                        ).length
+                      }
                     </span>
                     <span className="seat-txt">Seats available</span>
                   </div>

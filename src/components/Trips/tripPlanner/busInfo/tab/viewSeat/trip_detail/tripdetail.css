@@ -22,12 +22,14 @@
 .bd-inner-list {
   max-height: 220px;
   overflow: auto;
+  padding-left: 2em;
 }
 .trip-layout {
   border: 1px solid #f8f8f8;
   background-color: #f8f8f8;
   box-shadow: 0px 0px 10px #999898;
   margin: 2em 0;
+  width: 90%;
 }
 .fare-summary {
   font-size: 14px;
@@ -66,7 +68,7 @@
   background-color: #ce3e59;
   border: #d8576e;
   width: 92%;
-  margin: -15px 22px 1.3em;
+  margin: -15px 22px 0.3em;
 }
 .ant-radio-group {
   width: 100%;

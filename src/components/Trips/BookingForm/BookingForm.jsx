@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Carousel, Icon } from 'antd';
+import { Modal, Button, Icon } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import './BookingForm.css';
@@ -18,9 +18,9 @@ class BookingForm extends React.Component {
     }
   };
 
-  proceedToPay=()=>{
-    this.props.history.push('/payment')
-  }
+  proceedToPay = () => {
+    this.props.history.push('/payment');
+  };
 
   render() {
     return (
@@ -30,19 +30,22 @@ class BookingForm extends React.Component {
           title="Passenger Details"
           onOk={this.handleOk}
           onCancel={this.props.hideBookingForm}
-          width='630px'
-          style={{right:"-637.5px"}}
+          width="630px"
+          style={{ right: '-637.5px' }}
           footer={
-            <Button htmlType='submit' className='trip-search-btn' type='danger'>
+            <Button htmlType="submit" className="trip-search-btn" type="danger">
               Proceed to pay
             </Button>
           }
         >
           <form onSubmit={this.proceedToPay} className="passenger-details">
-          <Icon type="user" /><span>Pasenger's Information</span>
-            {this.props.selectedSeats.map((seat)=><Passengers key={seat.id} seat={seat}/>)}
-            <div className='contact-form'>
-              <div className='input-box' id='phone-container'>
+            <Icon type="user" />
+            <span>Pasenger's Information</span>
+            {this.props.selectedSeats.map(seat => (
+              <Passengers key={seat.id} seat={seat} />
+            ))}
+            <div className="contact-form">
+              <div className="input-box" id="phone-container">
                 <input
                   type="text"
                   className="input-field"

@@ -1,36 +1,25 @@
-.payment-layout {
+.payment-options {
+  width: 58%;
+  /* margin: 5em 4em; */
+  background-color: #fff;
+}
+.op {
+  font-size: 20px;
+  padding: 1em;
+  font-weight: 600;
+}
+.pay-icon {
+  font-size: 3em;
+}
+.ic {
+  color: #a4a3ac;
+  display: flex;
+  margin-top: 15px;
+}
+.pp-txt {
   display: flex;
 }
-.pay-box {
-  width: 80%;
-  padding: 9px 15px;
-  border: none;
-  border-radius: 23px;
-  margin: 0 0 22px 35px;
-  border-bottom: 1px solid gray;
-}
-.rccs__card {
-  height: 250.873px;
-  width: 420px;
-}
-.rccs {
-  width: 420px;
-}
-.expiry {
-  display: flex;
-  width: 85.8%;
-}
-*:focus {
-  outline: none;
-}
-.pay-btn {
-  width: 80%;
-  padding: 9px 15px;
-  border: none;
-  height: 45px;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  border-radius: 23px;
-  margin: 0 0 14px 35px;
-  border-bottom: 1px solid gray;
+.bb {
+  border-left: 2px solid rgb(175, 173, 173);
+  margin-left: 35px;
 }

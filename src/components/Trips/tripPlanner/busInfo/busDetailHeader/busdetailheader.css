@@ -1,8 +1,11 @@
 .bus-route-head {
-  margin: 3em 0 0 4.7em;
-  color: #0376c7;
-  font-weight: lighter;
-  font-size: 14px;
+  margin: 0 0 0 2.5em;
+  color: rgba(53, 68, 99, 1);
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  font-size: 16px;
+  padding: 10px 0 0 1.6em;
 }
 .t-duration {
   margin-left: 2.5em;

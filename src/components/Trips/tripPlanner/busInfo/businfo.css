@@ -1,9 +1,10 @@
 .bus-detail {
   border: 1px solid #dddddd;
-  margin: 0 0 0 2em;
-  padding-top: 1em;
+  margin: 0 0 48px 2em;
+  padding-top: 0.3em;
   border-bottom: 0;
   list-style-type: none;
+  border-top: 0;
 }
 .bus-box {
   display: flex;
@@ -16,16 +17,13 @@
   margin-left: 3px;
 }
 .col-three {
-  margin-left: 33px;
+  margin-left: 40px;
 }
 .col-four {
   margin-left: 8px;
 }
 .col-five {
-  margin-left: 2.9em;
-}
-.col-six {
-  margin-left: 0.1em;
+  margin-left: 3.2em;
 }
 .col-seven {
   margin-left: 0.2em;
