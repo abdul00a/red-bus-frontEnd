@@ -1,31 +1,34 @@
 .no-bus {
-  background-image: url(/static/media/wooden-billboard-png-8-original.34f11159.png);
-  padding: 13em;
-  background-repeat: no-repeat;
-  margin: 5em 20em;
-  background-size: cover;
-  padding-bottom: 4em;
+    background-image: url(../../../../../assets/images/no-buses-found.png);
+    padding: 13em;
+    background-repeat: no-repeat;
+    margin: 5em 20em;
+    background-size: cover;
+    padding-bottom: 4em;
 }
 
 .sorry {
-  font-size: 50px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
 }
+
 .no {
-  position: relative;
-  top: -3.5em;
-  transform: rotate(10deg);
+    position: relative;
+    top: -3.5em;
+    transform: rotate(10deg);
 }
+
 .bus {
-  position: relative;
-  top: -2.5em;
-  left: -0.5em;
+    position: relative;
+    top: -2.5em;
+    left: -0.5em;
 }
+
 .avail {
-  position: relative;
-  top: -1.7em;
-  left: -2em;
-  transform: rotate(5deg);
+    position: relative;
+    top: -1.7em;
+    left: -2em;
+    transform: rotate(5deg);
 }
