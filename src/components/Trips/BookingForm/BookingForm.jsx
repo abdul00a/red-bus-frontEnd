@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Button, Carousel } from 'antd';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import './BookingForm.css';
 import {
   typePhone,
@@ -21,8 +22,11 @@ class BookingForm extends React.Component {
   console.log(a, b, c);
 }
 
+proceedToPay=()=>{
+  this.props.history.push('/payment')
+}
+
   render() {
-    console.log(this.props);
     return (
       <div>
         <Modal
@@ -35,12 +39,12 @@ class BookingForm extends React.Component {
             <Button key='back' type='danger'>
               Return
             </Button>,
-            <Button key='submit' type='primary'>
+            <Button key='submit' htmlType='submit' type='primary'>
               Submit
             </Button>
           ]}
         >
-          <form>
+          <form onSubmit={this.proceedToPay}>
             <Carousel afterChange={this.onChange}>
             {this.props.selectedSeats.map((seat)=><Passengers key={seat.id} seat={seat}/>)}
             </Carousel>
@@ -92,4 +96,4 @@ const mapDispatchToProps = dispatch => {
 
 BookingForm = connect(mapStateToProps, mapDispatchToProps)(BookingForm);
 
-export default BookingForm;
+export default withRouter(BookingForm);

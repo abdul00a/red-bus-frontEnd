@@ -38,7 +38,7 @@ export const filterReducer = (state, action) => {
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
             bus =>
-              parseInt(bus.departure.substring(0, 2)) >= 6 &&
+              parseInt(bus.departure.substring(0, 2)) > 6 &&
               parseInt(bus.departure.substring(0, 2)) <= 12
           )
         };
@@ -55,7 +55,7 @@ export const filterReducer = (state, action) => {
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
             bus =>
-              parseInt(bus.departure.substring(0, 2)) >= 12 &&
+              parseInt(bus.departure.substring(0, 2)) > 12 &&
               parseInt(bus.departure.substring(0, 2)) <= 18
           )
         };
@@ -71,7 +71,7 @@ export const filterReducer = (state, action) => {
           ...state,
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
-            bus => parseInt(bus.departure.substring(0, 2)) >= 18
+            bus => parseInt(bus.departure.substring(0, 2)) > 18
           )
         };
       } else {
@@ -85,7 +85,7 @@ export const filterReducer = (state, action) => {
         return {
           ...state,
           filters: state.filters.concat([action]),
-          filteredBuses: state.filteredBuses.filter(bus => bus.busTye === 'AC')
+          filteredBuses: state.filteredBuses.filter(bus => bus.busType === 'AC')
         };
       } else {
         return {
@@ -141,7 +141,7 @@ export const filterReducer = (state, action) => {
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
             bus =>
-              parseInt(bus.arrival.substring(0, 2)) >= 6 &&
+              parseInt(bus.arrival.substring(0, 2)) > 6 &&
               parseInt(bus.arrival.substring(0, 2)) <= 12
           )
         };
@@ -158,7 +158,7 @@ export const filterReducer = (state, action) => {
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
             bus =>
-              parseInt(bus.arrival.substring(0, 2)) >= 12 &&
+              parseInt(bus.arrival.substring(0, 2)) > 12 &&
               parseInt(bus.arrival.substring(0, 2) <= 18)
           )
         };
@@ -174,7 +174,7 @@ export const filterReducer = (state, action) => {
           ...state,
           filters: state.filters.concat([action]),
           filteredBuses: state.filteredBuses.filter(
-            bus => parseInt(bus.arrival.substring(0, 2)) >= 18
+            bus => parseInt(bus.arrival.substring(0, 2)) > 18
           )
         };
       } else {

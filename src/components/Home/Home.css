@@ -2,7 +2,7 @@
     background-image: url(../../assets/images/cover.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    padding: 20vw 29vw 20vw 29vw;
+    padding: 20vw 28vw 20vw 28vw;
 }
 
 .bus-prop {
@@ -74,4 +74,28 @@
 
 *.focus {
     outline: none;
+}
+
+.search-signboard {
+    background-image: url(../../assets/images/search-signboard.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 650px;
+    background-size: 600px 600px;
+    width: 600px;
+    height: 600px;
+    padding-top: 350px;
+    padding-left: 200px;
+    animation-name: signboard;
+    animation-duration: 2s;
+}
+
+@keyframes signboard {
+    0% {
+        top: -1000px;
+    }
+    100% {
+        top: 50px;
+    }
 }

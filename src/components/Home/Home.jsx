@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import TripQueryForm from '../common/Form/Form';
 import { connect } from 'react-redux';
 import './Home.css';
-// import PaymentPage from '../paymentPage/paymentPage';
 
 class Home extends Component {
   render() {
     return (
       <div className='hero'>
         <div className='sun-prop' />
+        <div className="search-signboard">
         <TripQueryForm />
+        </div>
         <div className='road'>
           <hr className='divider' />
         </div>
