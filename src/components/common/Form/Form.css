@@ -1,23 +1,15 @@
 .ant-select-selection {
     border-radius: 0px;
-    border: none;
-    border-bottom: solid 1px;
-    background: none;
-    border-color: rgba(200, 200, 200, 1);
-    color: rgba(175, 175, 175, 1);
+    border-color: rgba(225, 225, 225, 1);
     height: 45px;
 }
 
 .ant-input {
     border-radius: 0px;
     width: 198px;
-    border: none;
-    border-bottom: solid 1px;
-    background: none;
-    border-color: rgba(200, 200, 200, 1);
-    color: rgba(175, 175, 175, 1);
+    border-color: rgba(225, 225, 225, 1);
     position: relative;
-    top: 2.9px;
+    top: 2.7px;
     height: 45px;
 }
 
@@ -35,21 +27,4 @@
 
 .ant-select-selection__placeholder {
     margin-top: -8px;
-}
-
-form {
-    padding: 0.2718vw;
-}
-
-.ant-select-selection__placeholder {
-    color: rgba(200, 200, 200, 1);
-}
-
-.ant-input:placeholder-shown {
-    color: rgba(200, 200, 200, 1);
-}
-
-.ant-select-open .ant-select-selection {
-    border: none !important;
-    border-bottom: solid 1px rgba(150, 150, 150, 1) !important;
 }

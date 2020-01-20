@@ -19,9 +19,18 @@ class PaymentCard extends Component {
 
   handleInputChange = e => {
     const { name, value } = e.target;
-
     this.setState({ [name]: value });
   };
+
+  handleCVCInputChange = e => {
+    let { name, value } = e.target;
+    let val=''
+    for(let i in value){
+      val+='*';
+    }
+    this.setState({ [name]: val });
+  };
+
 
   render() {
     return (
@@ -64,10 +73,10 @@ class PaymentCard extends Component {
               maxlength="4"
             />
             <input
-              type="tel"
+              type="password"
               name="cvc"
               placeholder="CVC"
-              onChange={this.handleInputChange}
+              onChange={this.handleCVCInputChange}
               onFocus={this.handleInputFocus}
               className="pay-box"
               pattern="\d*"

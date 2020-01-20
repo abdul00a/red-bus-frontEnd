@@ -13,7 +13,7 @@ class TripHeader extends Component {
         <div className='info'>{this.props.fromCityName}</div>
         <span className="from-to-arr"><Icon type="arrow-right" /></span>
         <div className='info'>{this.props.toCityName}</div>
-        <div className='depart-date'><Icon type="calendar" />{this.props.departureDate}</div>
+        <div className='depart-date'><Icon type="calendar" />{" "+this.props.departureDate}</div>
         <Button className='modify-btn' onClick={this.props.toggleModify}>Modify</Button>
         </div>
       </React.Fragment>

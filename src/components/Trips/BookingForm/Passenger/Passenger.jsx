@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Radio } from 'antd';
 import './Passenger.css'
-import { typeGender, typePassengerLName, typePassengerFName, typeAge, typePassengerGender, typePassengerAge } from '../../../../actions/BookingsForm/BookingsForm';
+import { typePassengerLName, typePassengerFName, typePassengerGender, typePassengerAge } from '../../../../actions/BookingsForm/BookingsForm';
 
 class Passengers extends Component {
   state = {};
@@ -29,12 +30,10 @@ class Passengers extends Component {
             <label className='passenger-field-label'>LAST NAME</label>
           </div>
           <div className='input-box' id='gender-container'>
-            <input
-              type='text'
-              className='passenger-input-field'
-              id='gender'
-              onChange={event => this.props.typePassengerGender(event.target.value,this.props.seat.id)}
-            />
+          <Radio.Group onChange={(event)=>this.props.typePassengerGender(event.target.value,this.props.seat.id)} value={this.props.gender}>
+          <Radio value={'Male'}>Male</Radio>
+          <Radio value={'Female'}>Female</Radio>
+        </Radio.Group>
             <label className='passenger-field-label'>GENDER</label>
           </div>
           <div className='input-box' id='age-container'>
@@ -52,8 +51,10 @@ class Passengers extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-    return{}
+const mapStateToProps = (state,ownProps) => {
+    return{
+      gender:state.bookingsForm.selectedSeats.filter(seat=>seat.id===ownProps.seat.id)[0].gender
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {

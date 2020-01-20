@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Carousel } from 'antd';
+import { Modal, Button, Carousel, Icon } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import './BookingForm.css';
@@ -18,36 +18,29 @@ class BookingForm extends React.Component {
     }
   };
 
-  onChange(a, b, c) {
-  console.log(a, b, c);
-}
-
-proceedToPay=()=>{
-  this.props.history.push('/payment')
-}
+  proceedToPay=()=>{
+    this.props.history.push('/payment')
+  }
 
   render() {
     return (
       <div>
         <Modal
           visible={this.props.display}
-          title="Passenger's Information"
+          title="Passenger Details"
           onOk={this.handleOk}
           onCancel={this.props.hideBookingForm}
           width='630px'
-          footer={[
-            <Button key='back' type='danger'>
-              Return
-            </Button>,
-            <Button key='submit' htmlType='submit' type='primary'>
-              Submit
+          style={{right:"-637.5px"}}
+          footer={
+            <Button htmlType='submit' className='trip-search-btn' type='danger'>
+              Proceed to pay
             </Button>
-          ]}
+          }
         >
-          <form onSubmit={this.proceedToPay}>
-            <Carousel afterChange={this.onChange}>
+          <form onSubmit={this.proceedToPay} className="passenger-details">
+          <Icon type="user" /><span>Pasenger's Information</span>
             {this.props.selectedSeats.map((seat)=><Passengers key={seat.id} seat={seat}/>)}
-            </Carousel>
             <div className='contact-form'>
               <div className='input-box' id='phone-container'>
                 <input

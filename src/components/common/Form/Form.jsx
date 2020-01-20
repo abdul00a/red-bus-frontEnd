@@ -47,11 +47,7 @@ class TripQueryForm extends Component {
       alert('Please fill in the departure date.');
       return(0);
     }
-    this.props.busDepart();
-    setTimeout(()=>{
-      this.props.history.push(`/search?fromCityName=${this.props.fromLocation}&toCityName=${this.props.toLocation}&departureDate=${this.props.departureDate}`);
-      this.props.busReset()
-    },1100)
+    this.props.history.push(`/search?fromCityName=${this.props.fromLocation}&toCityName=${this.props.toLocation}&departureDate=${this.props.departureDate}`);
     if(this.props.modify)
     {
       this.props.toggleModify();

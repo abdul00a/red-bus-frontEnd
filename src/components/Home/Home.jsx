@@ -7,15 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className='hero'>
-        <div className='sun-prop' />
-        <div className="search-signboard">
         <TripQueryForm />
-        </div>
-        <div className='road'>
-          <hr className='divider' />
-        </div>
-        <div className='bus-prop' style={(this.props.busPropStyle)} />
-        {/* <PaymentPage /> */}
       </div>
     );
   }
