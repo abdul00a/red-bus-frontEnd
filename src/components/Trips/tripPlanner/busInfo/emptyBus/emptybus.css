@@ -1,34 +1,24 @@
 .no-bus {
-    background-image: url(../../../../../assets/images/no-buses-found.png);
-    padding: 13em;
-    background-repeat: no-repeat;
-    margin: 5em 20em;
-    background-size: cover;
-    padding-bottom: 4em;
+  background-image: url(https://www.redbus.in/images/no_bus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  margin: 0 25%;
+}
+.error-bus {
+  margin: 0 24%;
+}
+.emp-bus {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a4a;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
-.sorry {
-    font-size: 50px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 2px;
-}
-
-.no {
-    position: relative;
-    top: -3.5em;
-    transform: rotate(10deg);
-}
-
-.bus {
-    position: relative;
-    top: -2.5em;
-    left: -0.5em;
-}
-
-.avail {
-    position: relative;
-    top: -1.7em;
-    left: -2em;
-    transform: rotate(5deg);
+.alert-noBus {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: rgb(104, 107, 104);
+  text-align: center;
 }

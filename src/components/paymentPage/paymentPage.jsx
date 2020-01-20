@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
 import './paymentPage.css';
 import PaymentCard from './paymentCard/paymentCard';
-import { Button } from 'antd';
+import { Icon } from 'antd';
 
 class PaymentPage extends Component {
   render() {
     return (
-      <section>
-        <div className="payment-logo"></div>
-        <div className="pay-options">
-          <div className="select-payment-method">
-            <div className="select-pay">
-              <div className="pay-text">PAYMENT OPTIONS</div>
-              <div>
-                <div>
-                  <Button className="op-payment deb">Debait Card >></Button>
+      <section className="back-color">
+        <div className="payment-head">
+          <div className="pay-layout">
+            <div className="box-1">
+              <div className="payment-logo"></div>
+              <div className="travel-route">
+                <div className="travel-day">
+                  <span>Delhi</span>
+                  <Icon type="arrow-right" className="pay-arrow" />
+                  <span>Chandigrah</span>
                 </div>
-                <div>
-                  <Button className="op-payment">Paytm</Button>
-                </div>
+                <span> 23-Jan-2020</span>
               </div>
             </div>
+            <div className="pay-timer">
+              <Icon type="clock-circle" className="clock" />
+              <span className="contdown">
+                10:00 <span style={{ fontSize: '15px' }}>minutes left</span>
+              </span>
+            </div>
           </div>
+        </div>
+
+        <div className="pay-section">
           <PaymentCard />
+          <div className="bk-detail">d</div>
         </div>
       </section>
     );

@@ -48,7 +48,7 @@ class TripPlanner extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.props.busDetail.length !== 0 ? (
           this.props.busDetail.map(ele => (
             <BusInfo buses={ele} key={ele.busId} />
@@ -56,7 +56,7 @@ class TripPlanner extends Component {
         ) : (
           <EmptyBus />
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }

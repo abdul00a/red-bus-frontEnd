@@ -5,7 +5,7 @@
 .search-results {
     height: 43.9vw;
     width: 85vw;
-    padding: 0px;
+    padding: 0 10px 10px 10px;
     background: none;
     color: rgba(255, 255, 255, 1);
     font-size: 20px;

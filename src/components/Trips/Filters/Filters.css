@@ -1,22 +1,22 @@
 .filters-container {
-    height: 43.9vw;
-    width: 15vw;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 10px;
-    overflow: auto;
+  height: 43.9vw;
+  width: 15vw;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0 10px 10px 10px;
+  overflow: auto;
 }
 
 .filter-box {
-    padding: 5px;
-    margin: 5px;
+  padding: 0 5px 5px 5px;
+  margin: 0 5px 5px 5px;
 }
 
 .filter-header {
-    font-weight: 900;
-    padding: 5px;
+  font-weight: 900;
+  padding: 5px;
 }
 
 ul {
-    list-style-type: none;
-    padding-inline-start: 10px;
+  list-style-type: none;
+  padding-inline-start: 10px;
 }

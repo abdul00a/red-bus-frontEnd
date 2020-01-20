@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Carousel, Icon } from 'antd';
+import { Modal, Button, Icon } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import './BookingForm.css';
@@ -18,9 +18,9 @@ class BookingForm extends React.Component {
     }
   };
 
-  proceedToPay=()=>{
-    this.props.history.push('/payment')
-  }
+  proceedToPay = () => {
+    this.props.history.push('/payment');
+  };
 
   render() {
     return (
