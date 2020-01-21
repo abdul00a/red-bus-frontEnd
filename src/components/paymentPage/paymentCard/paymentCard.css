@@ -1,15 +1,17 @@
 .payment-options {
   width: 58%;
-  /* margin: 5em 4em; */
   background-color: #fff;
+  height: 322px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px #999898;
 }
 .op {
-  font-size: 20px;
-  padding: 1em;
+  font-size: 23px;
+  padding: 0.7em 1em 0.2em;
   font-weight: 600;
 }
 .pay-icon {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .ic {
   color: #a4a3ac;
@@ -22,4 +24,39 @@
 .bb {
   border-left: 2px solid rgb(175, 173, 173);
   margin-left: 35px;
+  padding-left: 5px;
+}
+
+.pay-cardss {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+.ant-tabs-nav .ant-tabs-tab:last-child {
+  padding: 10px 1.8em 0 3em;
+}
+.pytm-txt1 {
+  color: #9d98b0;
+}
+.pytm-txt2 {
+  color: #714f4c;
+  font-weight: bold;
+  margin: 3em 4em;
+  font-size: 1.2em;
+}
+.online-pay {
+  height: 45px;
+  border-width: 0;
+  background-color: #d84e55;
+  color: #fff;
+  padding: 0px 35px;
+  position: relative;
+  left: 61.5em;
+}
+.ant-tabs .ant-tabs-left-content {
+  height: 187px;
+}
+.online-pay:hover {
+  color: #fff;
+  background-color: #d85e65;
 }

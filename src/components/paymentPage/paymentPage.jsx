@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './paymentPage.css';
 import PaymentCard from './paymentCard/paymentCard';
-import { Icon } from 'antd';
+import { Icon} from 'antd';
 
 class PaymentPage extends Component {
   render() {
