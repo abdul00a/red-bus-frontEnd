@@ -6,18 +6,18 @@ import { seatBooked } from './seatBookedReducer/seatReducer';
 import { bpdpReducer } from './bookedBoardingDroppingReducer/bookedBoarding';
 import bookingsFormReducer from './BookingsFormReducer/BookingsFormReducer';
 import { tripPlan } from './tripPlannerReducer/tripPlanner';
-import animationReducer from './animationReducer/animationReducer'
+import bookingBodyReducer from './bookingBodyReducer/bookingBodyReducer';
+
 
 const rootReducer = combineReducers({
   search: searchReducer,
   modify: TripModifyFormReducer,
   BusDetail: BusDetail,
-  // selectedBus
   seatBooked: seatBooked,
   bpdpReducer: bpdpReducer,
   bookingsForm: bookingsFormReducer,
   tripPlan: tripPlan,
-  animation:animationReducer,
+  bookingData:bookingBodyReducer
 });
 
 export default rootReducer;

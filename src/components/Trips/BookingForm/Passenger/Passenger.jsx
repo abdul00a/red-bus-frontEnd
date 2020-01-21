@@ -56,7 +56,7 @@ class Passengers extends Component {
 
 const mapStateToProps = (state,ownProps) => {
     return{
-      gender:state.bookingsForm.selectedSeats.filter(seat=>seat.id===ownProps.seat.id)[0].gender,
+      gender:state.bookingsForm.selectedSeats.length!==0&&ownProps.seat&&ownProps.seat.id&&state.bookingsForm.selectedSeats.filter(seat=>seat.id===ownProps.seat.id)[0].gender,
     }
 }
 

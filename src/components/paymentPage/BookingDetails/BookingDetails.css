@@ -1,0 +1,65 @@
+.trip-info {
+    border: none;
+    border-top: solid 3px rgba(0, 0, 255, 1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#bus-info {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+#bus-name {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+#bus-type {
+    font-size: 18px;
+    color: rgba(150, 150, 150, 1);
+}
+
+#depart-date {
+    font-size: 18px;
+    text-align: right;
+    grid-row: 1;
+    grid-column: 2;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+#trip-course {
+    grid-row: 2;
+    grid-column: 1/3;
+    color: rgba(150, 150, 150, 1);
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: solid 1px rgba(150, 150, 150, 1);
+}
+
+#passengers {
+    grid-row: 3;
+    grid-column: 1/3;
+    padding: 10px;
+}
+
+.passenger-info {
+    display: flex;
+    font-size: 16px;
+    color: rgba(150, 150, 150, 1);
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+#payable-amount-footer {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 4;
+    grid-column: 1/3;
+    background-color: rgba(224, 253, 232, 1);
+    padding: 20px;
+}

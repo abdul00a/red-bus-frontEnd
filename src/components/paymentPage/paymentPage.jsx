@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import './paymentPage.css';
 import PaymentCard from './paymentCard/paymentCard';
 import { Icon } from 'antd';
+import { withRouter } from 'react-router';
+import BookingDetails from './BookingDetails/BookingDetails';
 
 class PaymentPage extends Component {
   render() {
+    console.log(this.props);
     return (
       <section className="back-color">
         <div className="payment-head">
@@ -31,7 +34,9 @@ class PaymentPage extends Component {
 
         <div className="pay-section">
           <PaymentCard />
-          <div className="bk-detail">d</div>
+          <div className="bk-detail">
+          <BookingDetails />
+          </div>
         </div>
       </section>
     );

@@ -18,7 +18,7 @@ const bookingsFormReducer = (state={ display:false, selectedSeats:[], phone:'', 
             tempState=tempState.map(seat=>{
                 if(seat.id===action.seatId)
                 {
-                    seat.fName=action.fName
+                    seat.name=action.fName
                 }
                 return(seat)
             })
