@@ -7,7 +7,7 @@
   border: none;
   border-radius: 23px;
   margin: 0px 0 22px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(180, 178, 178);
 }
 .rccs__card {
   margin-right: 0;

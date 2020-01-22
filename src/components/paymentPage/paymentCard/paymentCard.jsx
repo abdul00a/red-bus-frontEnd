@@ -47,7 +47,7 @@ class PaymentCard extends Component {
               </TabPane>
             </Tabs>
           </div>
-          <div>
+          <div className="py-btnn">
             <Button className="online-pay">PAY INR 111.34</Button>
           </div>
         </div>

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^3.26.7",
     "json-loader": "^0.5.7",
+    "moment": "^2.24.0",
     "query-string": "^6.10.1",
     "react": "^16.12.0",
     "react-credit-cards": "^0.8.0",

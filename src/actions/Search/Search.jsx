@@ -72,7 +72,6 @@ export const fetchCities = () => {
         response
           .json()
           .then(cities => {
-            // console.log(cities);
             dispatch(receiveCities(cities));
           })
           .catch(err => {

@@ -1,73 +1,76 @@
 .payment-options {
-    width: 58%;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0px 0px 10px #999898;
+  width: 58%;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px #999898;
 }
 
 .op {
-    font-size: 23px;
-    padding: 0.7em 1em 0.2em;
-    font-weight: 600;
+  font-size: 23px;
+  padding: 0.7em 1em 0.2em;
+  font-weight: 600;
 }
 
 .pay-icon {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .ic {
-    color: #a4a3ac;
-    display: flex;
-    margin-top: 15px;
+  color: #a4a3ac;
+  display: flex;
+  margin-top: 15px;
 }
 
 .pp-txt {
-    display: block;
-    width: 9em;
+  display: block;
+  width: 9em;
 }
 
 .bb {
-    border-left: 2px solid rgb(175, 173, 173);
-    padding-left: 5px;
+  border-left: 2px solid rgb(175, 173, 173);
+  padding-left: 5px;
 }
 
 .pay-cardss {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
 }
 
 .ant-tabs-nav .ant-tabs-tab:last-child {
-    padding: 10px 1.8em 0 3em;
+  padding: 10px 1.8em 0 3em;
 }
 
 .pytm-txt1 {
-    color: #9d98b0;
+  color: #9d98b0;
 }
 
 .pytm-txt2 {
-    color: #714f4c;
-    font-weight: bold;
-    margin: 3em 4em;
-    font-size: 1.2em;
+  color: #714f4c;
+  font-weight: bold;
+  margin: 3em 4em;
+  font-size: 1.2em;
 }
 
 .online-pay {
-    height: 45px;
-    border-width: 0;
-    background-color: #d84e55;
-    color: #fff;
-    padding: 0px 35px;
-    position: relative;
-    left: 61.5em;
-    margin-bottom: 15px;
+  height: 45px;
+  border-width: 0;
+  background-color: #d84e55;
+  color: #fff;
+  padding: 0px 35px;
+  margin-bottom: 15px;
+  margin-right: 4em;
 }
 
 .ant-tabs .ant-tabs-left-content {
-    height: 187px;
+  height: 187px;
 }
 
 .online-pay:hover {
-    color: #fff;
-    background-color: #d85e65;
+  color: #fff;
+  background-color: #d85e65;
+}
+.py-btnn {
+  display: flex;
+  justify-content: flex-end;
 }

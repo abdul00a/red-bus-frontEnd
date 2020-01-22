@@ -7,7 +7,8 @@ import { bpdpReducer } from './bookedBoardingDroppingReducer/bookedBoarding';
 import bookingsFormReducer from './BookingsFormReducer/BookingsFormReducer';
 import { tripPlan } from './tripPlannerReducer/tripPlanner';
 import bookingBodyReducer from './bookingBodyReducer/bookingBodyReducer';
-
+import { userTicket } from './ticketReducer/ticketreducer';
+import { cancelTicketReducer } from './canelTicket/cancelticket';
 
 const rootReducer = combineReducers({
   search: searchReducer,
@@ -17,7 +18,9 @@ const rootReducer = combineReducers({
   bpdpReducer: bpdpReducer,
   bookingsForm: bookingsFormReducer,
   tripPlan: tripPlan,
-  bookingData:bookingBodyReducer
+  bookingData: bookingBodyReducer,
+  userTicket: userTicket,
+  cancled: cancelTicketReducer
 });
 
 export default rootReducer;
