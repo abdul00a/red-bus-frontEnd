@@ -1,0 +1,140 @@
+.t-history {
+  margin: 1.5% 23%;
+  padding: 8px 0 20px 0;
+  border: 1px solid #ddd;
+  border-bottom: 1.5px solid rgb(187, 184, 184);
+  max-height: 19em;
+  overflow: auto;
+  background-color: rgb(253, 251, 251);
+}
+.t-history:hover {
+  box-shadow: 0px 0px 4px #999898;
+}
+
+#bkdetil {
+  max-height: 0%;
+  transition: 0.5s ease-in;
+  overflow: hidden;
+  margin: 1em 6% 1em 4%;
+}
+
+#bkdetil.coolclass {
+  display: block !important;
+  max-height: 100%;
+  border-top: 1px solid rgb(187, 184, 184);
+  transition: 0.5s ease-in;
+  padding-top: 10px;
+}
+.d {
+  color: #f26161;
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+}
+.m-y {
+  text-align: center;
+}
+.week {
+  color: #504e50;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.bn {
+  color: #77797c;
+  font-weight: 600;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+.br {
+  color: #636975;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+.common {
+  color: #6d7175;
+  font-size: 1.4em;
+}
+.common1 {
+  color: #8f9497;
+  font-size: 1.15em;
+}
+.st {
+  color: #8f9497;
+  font-size: 1.1em;
+}
+.bn1 {
+  color: #77797c;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.brd {
+  border-top: 1px solid rgb(187, 184, 184);
+  padding-top: 5px;
+}
+.bbn {
+  margin-top: 1em;
+}
+.lst {
+  padding-left: 2em;
+}
+.mr-t {
+  margin-top: 15px;
+}
+
+.t-cn {
+  padding-left: 2em;
+}
+.t-cnn {
+  padding-left: 2.4em;
+}
+.ant-tabs .ant-tabs-left-bar .ant-tabs-tab,
+.ant-tabs .ant-tabs-right-bar .ant-tabs-tab {
+  padding: 16px 24px;
+}
+.ant-tabs .ant-tabs-left-content {
+  height: 100%;
+}
+
+.emptyy {
+  font-size: 2em;
+  color: #504e50;
+  margin-top: 1em;
+  margin-left: -15em;
+}
+.tic-container {
+  border-top: 2px solid rgb(187, 184, 184);
+  box-shadow: -2px 3px 0px #ddd;
+  margin: 0 0 0 -24px;
+  padding-bottom: 20px;
+}
+.can-ticket {
+  background: rgb(243, 62, 62);
+  color: #fff;
+  margin-top: 1em;
+  margin-left: 44em;
+  border: none;
+}
+.can-ticket:hover {
+  background: rgb(248, 88, 88);
+  color: #fff;
+  border: none;
+}
+.book-header {
+  font-size: 3em;
+  text-align: center;
+  font-family: monospace;
+  font-weight: 600;
+  background-color: rgb(233, 233, 233);
+  color: rgb(134, 132, 132);
+  padding-bottom: 1em;
+  min-height: 563px;
+}
+.pd {
+  padding-left: 25px;
+}
+.tick-id{
+  font-size: 1em;
+  width: 200px;
+}

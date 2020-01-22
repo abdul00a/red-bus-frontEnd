@@ -10,6 +10,8 @@ import bookingsFormReducer from './BookingsFormReducer/BookingsFormReducer';
 import { tripPlan } from './tripPlannerReducer/tripPlanner';
 import bookingBodyReducer from './bookingBodyReducer/bookingBodyReducer';
 import LoginReducer from './Login/Login';
+import { userTicket } from './ticketReducer/ticketreducer';
+import { cancelTicketReducer } from './canelTicket/cancelticket';
 
 const persistBusDetailReducerConfig = {
   key: 'bus-detail',
@@ -56,6 +58,8 @@ const rootReducer = combineReducers({
   tripPlan: tripPlan,
   bookingData:persistReducer(persistBookingBodyConfig,bookingBodyReducer),
   Login: persistReducer(persistLoginConfig,LoginReducer),
+  userTicket: userTicket,
+  cancled: cancelTicketReducer
 });
 
 export default rootReducer;

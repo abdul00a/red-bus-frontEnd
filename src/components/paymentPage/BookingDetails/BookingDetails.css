@@ -1,6 +1,6 @@
 .trip-info {
     border: none;
-    border-top: solid 3px rgba(0, 0, 255, 1);
+    border-top: solid 3px #D84E54;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }

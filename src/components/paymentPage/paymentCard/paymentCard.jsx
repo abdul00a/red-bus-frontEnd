@@ -70,7 +70,7 @@ class PaymentCard extends Component {
               </TabPane>
             </Tabs>
           </div>
-          <div>
+          <div className="pay-btnn">
             <Button className="online-pay" onClick={this.addBooking}>PAY INR {this.props.amount}</Button>
           </div>
         </div>

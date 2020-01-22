@@ -62,8 +62,8 @@ class BookingDetails extends Component {
           <div id="passengers">
           {this.props.passengers.map(passenger=><div className="passenger-info" key={passenger.passengerSeatName}><div>{passenger.passengerName}</div><div><b>Seat: </b>{passenger.passengerSeatName}</div></div>)}
           </div>
-          <div id="payable-amount-footer"><b>Total Payable Amount:</b><div><b>INR</b>{' '+this.props.passengers.reduce(
-            (fare, passenger) => (fare += passenger.passengerSeatPrice),
+          <div id="payable-amount-footer"><b>Total Payable Amount:</b><div><b>INR </b>{this.props.passengers.reduce(
+            (fare, passenger) => (fare += +passenger.passengerSeatPrice),
             0
           )}</div></div>
         </div>

@@ -12,6 +12,8 @@ import Trips from './components/Trips/Trips';
 import './App.css';
 import rootReducer from './reducer/rootReducer';
 import PaymentPage from './components/paymentPage/paymentPage';
+import BookingHistory from './components/ticketHistory/tickethistory';
+import Footer from './components/footer/footer';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 const persistor = persistStore(store)
@@ -29,6 +31,7 @@ function App() {
               <Route path='/payment' component={PaymentPage} />
             </Switch>
           </BrowserRouter>
+          <Footer />
         </PersistGate>
       </Provider>
     </React.Fragment>
