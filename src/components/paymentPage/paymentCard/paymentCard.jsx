@@ -2,11 +2,34 @@ import React, { Component } from 'react';
 import './paymentCard.css';
 import { Row, Col, Icon, Tabs, Button } from 'antd';
 import Card from '../card/card';
+import { connect } from 'react-redux';
+import { addBooking, setPaymentMethod } from '../../../actions/AddBooking/AddBooking';
 
 const { TabPane } = Tabs;
 
 class PaymentCard extends Component {
+
+  addBooking=()=>{
+    this.props.addBooking(this.props.bookingBody);
+  }
+
+  setPaymentMethod=(paymentMethod)=>{
+    console.log(paymentMethod)
+    if(paymentMethod==="1")
+    {
+      paymentMethod="card";
+    }
+    else{
+      if(paymentMethod==="2")
+      {
+        paymentMethod="paytm";
+      }
+    }
+    this.props.setPaymentMethod(paymentMethod);
+  }
+
   render() {
+    console.log(this.props)
     return (
       <React.Fragment>
         <div className="payment-options">
@@ -29,7 +52,7 @@ class PaymentCard extends Component {
             </Col>
           </Row>
           <div className="pay-cardss">
-            <Tabs tabPosition="left">
+            <Tabs tabPosition="left" onTabClick={this.setPaymentMethod}>
               <TabPane tab="Debit Card" key="1">
                 <Card />
               </TabPane>
@@ -48,12 +71,27 @@ class PaymentCard extends Component {
             </Tabs>
           </div>
           <div>
-            <Button className="online-pay">PAY INR 111.34</Button>
+            <Button className="online-pay" onClick={this.addBooking}>PAY INR {this.props.amount}</Button>
           </div>
         </div>
       </React.Fragment>
     );
   }
 }
+
+const mapStateToProps=(state)=>{
+  return{
+    bookingBody:state.bookingData.bookingBody
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    addBooking:(bookingBody)=>dispatch(addBooking(bookingBody)),
+    setPaymentMethod:(paymentMethod)=>dispatch(setPaymentMethod(paymentMethod)),
+  }
+}
+
+PaymentCard=connect(mapStateToProps,mapDispatchToProps)(PaymentCard);
 
 export default PaymentCard;

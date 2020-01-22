@@ -1,4 +1,4 @@
-import { REQUEST_ADD_BOOKING, RECEIVE_ADD_BOOKING, RECEIVE_ADD_BOOKING_FAILED, POPULATE_BOOKING_BODY } from "../constant"
+import { REQUEST_ADD_BOOKING, RECEIVE_ADD_BOOKING, RECEIVE_ADD_BOOKING_FAILED, POPULATE_BOOKING_BODY, TOGGLE_EXPIRE_HOLD_TIMER, ENABLE_TIMER, SET_PAYMENT_METHOD } from "../constant"
 
 export const requestAddBooking = () => {
     return{
@@ -20,6 +20,25 @@ export const receiveAddBookingFailed = (err) =>{
     }
 }
 
+export const toggleExpireHoldTimer = () => {
+    return{
+        type:TOGGLE_EXPIRE_HOLD_TIMER,
+    }
+}
+
+export const enableExpireHoldTimer = () => {
+    return{
+        type:ENABLE_TIMER
+    }
+}
+
+export const setPaymentMethod=(paymentMethod)=>{
+    return{
+        type:SET_PAYMENT_METHOD,
+        paymentMethod:paymentMethod,
+    }
+}
+
 export const populateBookingBody = (busName, userId, busId, routeId, emailOnTicket, phoneOnTicket, fare, dateOfJourney, dayOfJourney, dateOfBooking, dayOfBooking, boardingPoint, droppingPoint, boardingTime, droppingTime, passengers) => {
     return{
         type:POPULATE_BOOKING_BODY,
@@ -38,6 +57,7 @@ export const addBooking = (bookingData) => {
             body: JSON.stringify(bookingData) 
           }).then(response=>{
               response.json().then(bookings=>{
+                  console.log(bookings)
                   dispatch(receiveAddBooking(bookings));
               }).catch(err=>{
                   dispatch(receiveAddBookingFailed(err));

@@ -6,7 +6,8 @@ import {
   TYPE_TO,
   SET_DEPARTURE_DATE,
   SET_RETURN_DATE,
-  SET_SEARCH_SUGGESTIONS
+  SET_SEARCH_SUGGESTIONS,
+  RESET_SEARCH
 } from '../constant';
 
 export const requestCities = () => {
@@ -64,10 +65,16 @@ export const setSearchSuggestions = suggestions => {
   };
 };
 
+export const resetSearch=()=>{
+  return{
+    type:RESET_SEARCH,
+  }
+}
+
 export const fetchCities = () => {
   return dispatch => {
     dispatch(requestCities());
-    return fetch('https://violetbus.herokuapp.com/city')
+    return fetch('https://violetbus.herokuapp.com/city',{headers:{'Access-Control-Allow-Origin':'*'}})
       .then(response => {
         response
           .json()

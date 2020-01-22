@@ -17,3 +17,43 @@
     background-image: url(../../assets/images/logo.png);
     display: inline-block;
 }
+
+.accounts-section {
+    color: rgba(255, 0, 0, 1) !important;
+    font-size: 20px;
+    padding-top: 10px;
+    height: 56px;
+}
+
+.desktop-payment-offers {
+    background-image: url(../../assets/images/desktop-payment-offers.svg);
+    width: 100%;
+    height: 515px;
+    background-size: 100%;
+}
+
+#login-google {
+    width: 100%;
+    height: 515px;
+    padding: 100px 75px 100px 75px;
+}
+
+#login-with-google-line {
+    font-size: 30px;
+    text-align: center;
+}
+
+#google-logo {
+    background-image: url(../../assets/images/google-logo.png);
+    background-size: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgba(175, 175, 175, 1);
+}
+
+#google-logo:hover {
+    box-shadow: 0px 0px 4px rgba(150, 150, 150, 1);
+}

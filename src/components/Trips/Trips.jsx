@@ -7,8 +7,20 @@ import { cities } from '../../city.js';
 import './Trips.css';
 import TripPlanner from './tripPlanner/tripPlanner';
 import BookingForm from './BookingForm/BookingForm';
+import { resetDisplayBookingsForm } from '../../actions/BookingsForm/BookingsForm';
+import { resetNumOfSeats } from '../../actions/seatBooked/seatbooked';
+import { resetTripPlanner } from '../../actions/tripPlanner/tripPlanner';
+import { resetBoardingPoints } from '../../actions/bookedBoardingDropping/bookedBoarding/bookedBoarding';
+import { resetDroppingPoints } from '../../actions/bookedBoardingDropping/bookedDropping/bookedDropping';
 
 class Trips extends Component {
+  componentDidMount = () => {
+    this.props.resetDisplayBookingsForm();
+    this.props.ResetBoardingPoints();
+    this.props.ResetBusSeats();
+    this.props.ResetToggleTripPlanner();
+    this.props.ResetDroppingPoints();
+  };
   render() {
     const { fromCityName, toCityName, departureDate } = queryString.parse(
       this.props.location.search
@@ -31,7 +43,7 @@ class Trips extends Component {
             />
           </div>
         </div>
-        <BookingForm />
+        {this.props.display&&<BookingForm />}
       </React.Fragment>
     );
   }
@@ -39,6 +51,7 @@ class Trips extends Component {
 
 const mapStateToProps = state => {
   return {
+    display: state.bookingsForm.display,
     fromCityName: state.search.fromLocation,
     toCityName: state.search.toLocation,
     departureDate: state.search.departureDate,
@@ -47,7 +60,13 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    resetDisplayBookingsForm: () => dispatch(resetDisplayBookingsForm()),
+    ResetBusSeats: () => dispatch(resetNumOfSeats()),
+    ResetToggleTripPlanner: () => dispatch(resetTripPlanner()),
+    ResetBoardingPoints: () => dispatch(resetBoardingPoints()),
+    ResetDroppingPoints: () => dispatch(resetDroppingPoints())
+  };
 };
 
 Trips = connect(mapStateToProps, mapDispatchToProps)(Trips);

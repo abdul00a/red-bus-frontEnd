@@ -30,7 +30,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class Tab extends Component {
+class Tab extends Component {  
   handleTab = e => {
     if (this.props.idBus !== this.props.selectedBus) {
       this.props.closeTab(this.props.selectedBus);

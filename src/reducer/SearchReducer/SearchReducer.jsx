@@ -6,7 +6,8 @@ import {
   TYPE_TO,
   SET_DEPARTURE_DATE,
   SET_RETURN_DATE,
-  SET_SEARCH_SUGGESTIONS
+  SET_SEARCH_SUGGESTIONS,
+  RESET_SEARCH
 } from '../../actions/constant';
 
 export const searchReducer = (
@@ -37,6 +38,15 @@ export const searchReducer = (
       return { ...state, returnDate: action.date };
     case SET_SEARCH_SUGGESTIONS:
       return { ...state, searchSuggestions: action.suggestions };
+    case RESET_SEARCH:
+      return{
+        cities: [],
+        fetchingCities: false,
+        err: false,
+        departureDate: '',
+        returnDate: '',
+        searchSuggestions: []
+      }
     default:
       return state;
   }

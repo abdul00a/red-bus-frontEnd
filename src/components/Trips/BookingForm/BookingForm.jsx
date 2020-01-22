@@ -10,8 +10,13 @@ import {
   toggleDisplayBookingsForm
 } from '../../../actions/BookingsForm/BookingsForm';
 import Passengers from './Passenger/Passenger';
+import { enableExpireHoldTimer } from '../../../actions/AddBooking/AddBooking';
 
 class BookingForm extends React.Component {
+  componentDidMount=()=>{
+    this.props.populateSelectedSeats(this.props.seats);
+  }
+
   componentDidUpdate = () => {
     if (this.props.selectedSeats.length !== this.props.seats.length) {
       this.props.populateSelectedSeats(this.props.seats);
@@ -19,6 +24,7 @@ class BookingForm extends React.Component {
   };
 
   proceedToPay = () => {
+    this.props.enableTimer();
     this.props.history.push('/payment');
   };
 
@@ -88,7 +94,8 @@ const mapDispatchToProps = dispatch => {
     populateSelectedSeats: seats => dispatch(populateSeats(seats)),
     typePhone: phone => dispatch(typePhone(phone)),
     typeEMail: eMail => dispatch(typeEMail(eMail)),
-    hideBookingForm: () => dispatch(toggleDisplayBookingsForm())
+    hideBookingForm: () => dispatch(toggleDisplayBookingsForm()),
+    enableTimer: ()=>dispatch(enableExpireHoldTimer())
   };
 };
 

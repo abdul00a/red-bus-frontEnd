@@ -8,8 +8,8 @@ import EmptyBus from './busInfo/emptyBus/emptybus';
 const mapStateToProps = state => {
   return {
     busDetail: state.BusDetail.filteredBuses,
-    filters: state.BusDetail.filters
-  };
+    filters: state.BusDetail.filters,
+  }
 };
 const mapDispatchToProps = dispatch => {
   return {
@@ -20,14 +20,19 @@ const mapDispatchToProps = dispatch => {
 };
 
 class TripPlanner extends Component {
+  constructor(){
+    super();
+    this.fetchingFlag=true;
+  }
   componentDidMount() {
     this.props.RequestBusDetail(
       this.props.fromCityName,
       this.props.toCityName,
       this.props.departureDate
-    );
+    )
   }
   componentDidUpdate = prevProps => {
+    this.fetchingFlag=false;
     if (
       !(
         this.props.fromCityName === prevProps.fromCityName &&
@@ -53,9 +58,7 @@ class TripPlanner extends Component {
           this.props.busDetail.map(ele => (
             <BusInfo buses={ele} key={ele.busId} />
           ))
-        ) : (
-          <EmptyBus />
-        )}
+        ) : (this.fetchingFlag)?<div ide="loader" />:<EmptyBus />}
       </React.Fragment>
     );
   }

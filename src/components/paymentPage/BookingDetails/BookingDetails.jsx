@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { populateBookingBody } from '../../../actions/AddBooking/AddBooking';
-import { thisExpression } from '@babel/types';
 import './BookingDetails.css';
 
 class BookingDetails extends Component {
@@ -15,15 +14,15 @@ class BookingDetails extends Component {
       String(bookingDate.getDate() + 1).padStart(2, '0');
     this.props.populateBookingBody(
       this.props.bus.busName,
-      1,
-      this.props.bus.busId,
-      this.props.bus.routeTable.id,
+      "104198639982688765758",
+      `${this.props.bus.busId}`,
+      `${this.props.bus.routeTable.id}`,
       this.props.email,
       this.props.phone,
-      this.props.passengers.reduce(
+      `${this.props.passengers.reduce(
         (fare, passenger) => (fare += passenger.passengerSeatPrice),
         0
-      ),
+      )}`,
       this.props.departureDate,
       new Date(this.props.departureDate).toLocaleString('en', {
         weekday: 'long'
@@ -38,7 +37,6 @@ class BookingDetails extends Component {
     );
   };
   render() {
-    console.log(this.props);
     return (
       <React.Fragment>
         <div className='trip-info'>
@@ -87,9 +85,9 @@ const mapStateToProps = state => {
         passengerName: seat.name,
         passengerGender: seat.gender,
         passengerAge: seat.age,
-        passengerSeatId: seat.id,
+        passengerSeatId: `${seat.id}`,
         passengerSeatName: seat.seatName,
-        passengerSeatPrice: seat.seatPrice
+        passengerSeatPrice: `${seat.seatPrice}`
       };
     }),
     boardingPoint: state.bpdpReducer.bpDetail,

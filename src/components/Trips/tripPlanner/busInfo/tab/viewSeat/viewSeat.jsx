@@ -52,7 +52,6 @@ class ViewSeat extends Component {
   };
 
   render() {
-    console.log(this.props.numOfSeat);
     return (
       <div className="seats-display-container">
         <div className="left-box">

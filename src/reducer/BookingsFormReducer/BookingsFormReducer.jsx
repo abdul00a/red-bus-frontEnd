@@ -1,4 +1,4 @@
-import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS, TYPE_PASSENGER_NAME, TYPE_PASSENGER_GENDER, TYPE_PASSENGER_AGE } from "../../actions/constant";
+import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS, TYPE_PASSENGER_NAME, TYPE_PASSENGER_GENDER, TYPE_PASSENGER_AGE, RESET_DISPLAY_BOOKINGS_FORM } from "../../actions/constant";
 
 const bookingsFormReducer = (state={ display:false, selectedSeats:[], phone:'', eMail:'', },action)=>{
     let tempState=[];
@@ -43,6 +43,8 @@ const bookingsFormReducer = (state={ display:false, selectedSeats:[], phone:'', 
                 return(seat)
             })
             return{...state, selectedSeats:tempState}
+        case RESET_DISPLAY_BOOKINGS_FORM:
+            return{ display:false, selectedSeats:[], phone:'', eMail:'', }
         default:
             return state
     }

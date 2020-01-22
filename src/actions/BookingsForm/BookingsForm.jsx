@@ -1,4 +1,4 @@
-import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS, TYPE_PASSENGER_NAME, TYPE_PASSENGER_GENDER, TYPE_PASSENGER_AGE } from "../constant"
+import { TOGGLE_DISPLAY_BOOKINGS_FORM, TYPE_PHONE, TYPE_E_MAIL, POPULATE_SEATS, TYPE_PASSENGER_NAME, TYPE_PASSENGER_GENDER, TYPE_PASSENGER_AGE, RESET_DISPLAY_BOOKINGS_FORM } from "../constant"
 
 export const toggleDisplayBookingsForm =()=>{
     return{
@@ -48,5 +48,11 @@ export const typePassengerAge = (age, seatId) => {
         type:TYPE_PASSENGER_AGE,
         age:age,
         seatId:seatId,
+    }
+}
+
+export const resetDisplayBookingsForm =()=>{
+    return{
+        type:RESET_DISPLAY_BOOKINGS_FORM,
     }
 }
