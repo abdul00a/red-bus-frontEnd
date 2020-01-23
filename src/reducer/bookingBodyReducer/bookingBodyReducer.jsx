@@ -1,6 +1,6 @@
 import { REQUEST_ADD_BOOKING, RECEIVE_ADD_BOOKING, RECEIVE_ADD_BOOKING_FAILED, POPULATE_BOOKING_BODY, TOGGLE_EXPIRE_HOLD_TIMER, ENABLE_TIMER, SET_PAYMENT_METHOD } from "../../actions/constant";
 
-const bookingBodyReducer = (state={bookingBody:{}, holdTimerExpired:true, bookingData:[], requestingAddBooking:false, addBookingFailed:false, paymentMethod:''}, action) => {
+const bookingBodyReducer = (state={bookingBody:{}, holdTimerExpired:true, bookingData:{}, requestingAddBooking:false, addBookingFailed:false, paymentMethod:''}, action) => {
     switch(action.type){
         case REQUEST_ADD_BOOKING:
             return{...state, requestingAddBooking:true}

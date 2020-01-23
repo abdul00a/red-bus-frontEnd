@@ -58,6 +58,7 @@ class BookingForm extends React.Component {
                   id="phone"
                   placeholder="Phone"
                   onChange={event => this.props.typePhone(event.target.value)}
+                  required={true}
                 />
                 
               </div>
@@ -69,6 +70,7 @@ class BookingForm extends React.Component {
                   id="email"
                   placeholder="E-mail"
                   onChange={event => this.props.typeEMail(event.target.value)}
+                  required={true}
                 />
               </div>
             </div>

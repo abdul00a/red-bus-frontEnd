@@ -12,10 +12,11 @@ export const requestLogin = () => {
     }
 }
 
-export const loggedIn = (userId) => {
+export const loggedIn = (userId, accessToken) => {
     return{
         type:LOGGED_IN,
         userId:userId,
+        accessToken:accessToken,
     }
 }
 
@@ -30,10 +31,10 @@ export const logIn = () => {
     return (dispatch) => {
         console.log('fghj')
         dispatch(requestLogin())
-        return fetch('https://violetbus.herokuapp.com/userlogin',{method:'POST', headers:{'Access-Control-Allow-Origin':'*'}}).then(response=>{
+        return fetch('https://violetbus.herokuapp.com/userlogin',{method:'GET', headers:{'Access-Control-Allow-Origin':'*'}}).then(response=>{
             response.json().then(loginData=>{
                 console.log(loginData)
-                dispatch(loggedIn(loginData.userId));
+                dispatch(loggedIn(loginData.userId, loginData.accessToken));
             }).catch(err=>{
                 console.log(err)
                 diispatch(loginFailed(err));

@@ -22,6 +22,10 @@ class PaymentPage extends Component {
     }
   };
 
+  routeToBookings=()=>{
+    this.props.history.push('/bookinghistory');
+  }
+
   render() {
     console.log(this.props);
     return (
@@ -49,8 +53,9 @@ class PaymentPage extends Component {
 
             <div className='pay-section'>
               <PaymentCard
+              routeToBookings={this.routeToBookings}
                 amount={this.props.seats.reduce(
-                  (payableAmount, seat) => (payableAmount += seat.seatPrice),
+                  (payableAmount, seat) => (payableAmount += +seat.seatPrice),
                   0
                 )}
               />

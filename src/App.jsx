@@ -16,19 +16,20 @@ import BookingHistory from './components/ticketHistory/tickethistory';
 import Footer from './components/footer/footer';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
-const persistor = persistStore(store)
+const persistor = persistStore(store);
 
 function App() {
   return (
     <React.Fragment>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <NavBar />
           <BrowserRouter>
+          <NavBar />
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/search' component={Trips} />
               <Route path='/payment' component={PaymentPage} />
+              <Route path='/bookinghistory' component={BookingHistory} />
             </Switch>
           </BrowserRouter>
           <Footer />

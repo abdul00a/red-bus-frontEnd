@@ -3,7 +3,6 @@ import Header from './Header/Header';
 import { connect } from 'react-redux';
 import Filters from './Filters/Filters';
 import queryString from 'query-string';
-import { cities } from '../../city.js';
 import './Trips.css';
 import TripPlanner from './tripPlanner/tripPlanner';
 import BookingForm from './BookingForm/BookingForm';
@@ -31,7 +30,6 @@ class Trips extends Component {
           fromCityName={fromCityName}
           toCityName={toCityName}
           departureDate={departureDate}
-          cities={cities}
         />
         <div className='search-content'>
           <Filters />

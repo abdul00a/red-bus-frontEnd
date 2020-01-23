@@ -24,6 +24,7 @@ class Passengers extends Component {
                   this.props.seat.id
                 )
               }
+              required
             />
           </div>
           <div className='input-box' id='gender-container'>
@@ -46,6 +47,7 @@ class Passengers extends Component {
                   this.props.seat.id
                 )
               }
+              required
             />
           </div>
         </div>

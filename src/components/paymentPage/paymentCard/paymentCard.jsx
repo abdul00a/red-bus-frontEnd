@@ -11,6 +11,12 @@ class PaymentCard extends Component {
 
   addBooking=()=>{
     this.props.addBooking(this.props.bookingBody);
+    if(Object.entries(this.props.bookingData).length!==0){
+      console.log(this.props.bookingData)
+      alert('Booking Done!!!')
+      this.props.routeToBookings();
+    }
+    
   }
 
   setPaymentMethod=(paymentMethod)=>{
@@ -56,18 +62,6 @@ class PaymentCard extends Component {
               <TabPane tab="Debit Card" key="1">
                 <Card />
               </TabPane>
-              <TabPane tab="Paytm" key="2">
-                <span className="pytm-txt1">
-                  Please note: You will be redirected to Paytm page on click of
-                  Pay button
-                </span>
-                <div className="pytm-txt2">
-                  <span>
-                    Please note: Payment details will be collected at payment
-                    gateway to complete the booking.
-                  </span>
-                </div>
-              </TabPane>
             </Tabs>
           </div>
           <div className="pay-btnn">
@@ -81,7 +75,8 @@ class PaymentCard extends Component {
 
 const mapStateToProps=(state)=>{
   return{
-    bookingBody:state.bookingData.bookingBody
+    bookingBody:state.bookingData.bookingBody,
+    bookingData:state.bookingData.bookingData,
   }
 }
 
@@ -95,3 +90,37 @@ const mapDispatchToProps=(dispatch)=>{
 PaymentCard=connect(mapStateToProps,mapDispatchToProps)(PaymentCard);
 
 export default PaymentCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <TabPane tab="Paytm" key="2">
+//                 <span className="pytm-txt1">
+//                   Please note: You will be redirected to Paytm page on click of
+//                   Pay button
+//                 </span>
+//                 <div className="pytm-txt2">
+//                   <span>
+//                     Please note: Payment details will be collected at payment
+//                     gateway to complete the booking.
+//                   </span>
+//                 </div>
+//               </TabPane>

@@ -20,7 +20,7 @@ class BookingDetails extends Component {
       this.props.email,
       this.props.phone,
       `${this.props.passengers.reduce(
-        (fare, passenger) => (fare += passenger.passengerSeatPrice),
+        (fare, passenger) => (fare += +passenger.passengerSeatPrice),
         0
       )}`,
       this.props.departureDate,
@@ -83,7 +83,7 @@ const mapStateToProps = state => {
     passengers: state.bookingsForm.selectedSeats.map(seat => {
       return {
         passengerName: seat.name,
-        passengerGender: seat.gender,
+        passengerGender: seat.gender||'N/A',
         passengerAge: seat.age,
         passengerSeatId: `${seat.id}`,
         passengerSeatName: seat.seatName,

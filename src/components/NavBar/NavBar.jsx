@@ -1,9 +1,12 @@
 import React from 'react';
 import { Menu, Row, Col, Icon } from 'antd';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Modal } from 'antd';
 import './NavBar.css';
 import { toggleDisplayLoginForm, logIn } from '../../actions/Login/Login';
+import { logout } from '../../actions/AddBooking/AddBooking';
+import WrappedNormalLoginForm from './LoginForm/LoginForm';
 
 class NavBar extends React.Component {
   state = {
@@ -30,7 +33,7 @@ class NavBar extends React.Component {
               <Menu.Item key='logo' disabled>
                 <div className='logo' />
               </Menu.Item>
-              <Menu.Item key='busTkt'>BUS TICKETS</Menu.Item>
+              <Menu.Item key='busTkt'><Link to="/">BUS TICKETS</Link></Menu.Item>
               <Menu.Item key='pool'>
                 rPool<sup>NEW</sup>
               </Menu.Item>
@@ -39,7 +42,7 @@ class NavBar extends React.Component {
             </Menu>
           </Col>
           <Col span={4}>
-            {!this.props.loggedIn ? (
+            {this.props.loggedIn ? (
               <Menu
                 onClick={this.handleClick}
                 selectedKeys={[this.state.current]}
@@ -55,8 +58,8 @@ class NavBar extends React.Component {
                   }
                 >
                   <Menu.ItemGroup>
-                    <Menu.Item key='booking-history'>My Tickets</Menu.Item>
-                    <Menu.Item key='logout'>LogOut</Menu.Item>
+                    <Menu.Item key='booking-history'><Link to='/bookinghistory'>My Tickets</Link></Menu.Item>
+                    <Menu.Item key='logout' onClick={this.props.logOut}>LogOut</Menu.Item>
                   </Menu.ItemGroup>
                 </Menu.SubMenu>
               </Menu>
@@ -90,7 +93,7 @@ class NavBar extends React.Component {
           </Col>
         </Row>
         <Modal
-          title='Login using Google'
+          title='Login'
           visible={this.props.display}
           onOk={this.handleOk}
           onCancel={this.props.toggleDisplayLoginForm}
@@ -103,8 +106,7 @@ class NavBar extends React.Component {
             </Col>
             <Col span={12}>
               <div id='login-google'>
-                <div id='login-with-google-line'>Sign-in with Google.</div>
-                <div id='google-logo' onClick={this.props.logIn} />
+                <WrappedNormalLoginForm />
               </div>
             </Col>
           </Row>
@@ -125,7 +127,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     toggleDisplayLoginForm: () => dispatch(toggleDisplayLoginForm()),
-    logIn: () => dispatch(logIn())
+    logIn: () => dispatch(logIn()),
+    logOut:()=>dispatch(logout()),
   };
 };
 
