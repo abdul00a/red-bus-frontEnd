@@ -50,23 +50,23 @@ export const setPaymentMethod = paymentMethod => {
   };
 };
 
-export const requestLogout=()=>{
-    return{
-        type:REQUEST_LOGOUT,
-    }
-}
+export const requestLogout = () => {
+  return {
+    type: REQUEST_LOGOUT
+  };
+};
 
-export const receiveLogout =()=>{
-    return{
-        type:RECEIVE_LOGOUT,
-    }
-}
+export const receiveLogout = () => {
+  return {
+    type: RECEIVE_LOGOUT
+  };
+};
 
-export const receiveLogoutFailed=()=>{
-    return{
-        type:RECEIVE_LOGOUT_FAILED,
-    }
-}
+export const receiveLogoutFailed = () => {
+  return {
+    type: RECEIVE_LOGOUT_FAILED
+  };
+};
 
 export const populateBookingBody = (
   busName,
@@ -113,67 +113,72 @@ export const addBooking = bookingData => {
   console.log(bookingData.paymentMethod);
   return dispatch => {
     dispatch(requestAddBooking());
-    if (bookingData.paymentMethod === 'card') {
-      fetch('https://violetbus.herokuapp.com/addBooking', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify(bookingData)
+    // if (bookingData.paymentMethod === 'card') {
+    fetch('https://violetbus.herokuapp.com/addBooking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify(bookingData)
+    })
+      .then(response => {
+        response
+          .json()
+          .then(bookings => {
+            console.log(bookings);
+            dispatch(receiveAddBooking(bookings));
+          })
+          .catch(err => {
+            dispatch(receiveAddBookingFailed(err));
+          });
       })
-        .then(response => {
-          response
-            .json()
-            .then(bookings => {
-              console.log(bookings);
-              dispatch(receiveAddBooking(bookings));
-            })
-            .catch(err => {
-              dispatch(receiveAddBookingFailed(err));
-            });
-        })
-        .catch(err => {
-          dispatch(receiveAddBookingFailed(err));
-        });
-    } else {
-      fetch('https://violetbus.herokuapp.com/pay', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify(bookingData)
-      })
-        .then(response => {
-          response
-            .json()
-            .then(bookings => {
-              console.log(bookings);
-              dispatch(receiveAddBooking(bookings));
-            })
-            .catch(err => {
-              dispatch(receiveAddBookingFailed(err));
-            });
-        })
-        .catch(err => {
-          dispatch(receiveAddBookingFailed(err));
-        });
-    }
+      .catch(err => {
+        dispatch(receiveAddBookingFailed(err));
+      });
+    // } else {
+    //   fetch('https://violetbus.herokuapp.com/pay', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'Access-Control-Allow-Origin': '*'
+    //     },
+    //     body: JSON.stringify(bookingData)
+    //   })
+    //     .then(response => {
+    //       response
+    //         .json()
+    //         .then(bookings => {
+    //           console.log(bookings);
+    //           dispatch(receiveAddBooking(bookings));
+    //         })
+    //         .catch(err => {
+    //           dispatch(receiveAddBookingFailed(err));
+    //         });
+    //     })
+    //     .catch(err => {
+    //       dispatch(receiveAddBookingFailed(err));
+    //     });
+    // }
   };
 };
 
-export const logout=()=>{
-    return (dispatch)=>{
-        dispatch(requestLogout());
-        fetch('https://violetbus.herokuapp.com/logout').then(response=>{
-            response.json().then(data=>{
-                dispatch(receiveLogout());
-            }).catch(err=>{
-                dispatch(receiveLogoutFailed());
-            })
-        }).catch(err=>{
+export const logout = () => {
+  return dispatch => {
+    dispatch(requestLogout());
+    fetch('https://violetbus.herokuapp.com/logout')
+      .then(response => {
+        response
+          .json()
+          .then(data => {
+            dispatch(receiveLogout());
+          })
+          .catch(err => {
             dispatch(receiveLogoutFailed());
-        })
-    }
-}
+          });
+      })
+      .catch(err => {
+        dispatch(receiveLogoutFailed());
+      });
+  };
+};
