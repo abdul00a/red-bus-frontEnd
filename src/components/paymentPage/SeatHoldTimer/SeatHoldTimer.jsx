@@ -6,7 +6,7 @@ import { toggleExpireHoldTimer } from '../../../actions/AddBooking/AddBooking';
 class SeatHoldTimer extends Component {
   constructor() {
     super();
-    this.state = { time: {}, seconds: 600 };
+    this.state = { time: {}, seconds: 60 };
     this.timer = 0;
     this.countDown = this.countDown.bind(this);
   }
@@ -32,7 +32,7 @@ class SeatHoldTimer extends Component {
     let timeLeftVar = this.secondsToTime(this.state.seconds);
     this.setState({ time: timeLeftVar });
     if (!this.props.timerExpired) {
-      if (this.timer == 0 && this.state.seconds > 0) {
+      if (this.timer === 0 && this.state.seconds > 0) {
         this.timer = setInterval(this.countDown, 1000);
       }
     }
@@ -44,8 +44,8 @@ class SeatHoldTimer extends Component {
       time: this.secondsToTime(seconds),
       seconds: seconds
     });
-    if (seconds == 0) {
-      this.props.toggleExpireTimer()
+    if (seconds === 0) {
+      this.props.toggleExpireTimer();
       clearInterval(this.timer);
     }
   }
@@ -53,8 +53,8 @@ class SeatHoldTimer extends Component {
   render() {
     return (
       <div>
-        <Icon type='clock-circle' className='clock' />
-        <span className='contdown'>
+        <Icon type="clock-circle" className="clock" />
+        <span className="contdown">
           {this.state.time.m}:{this.state.time.s}{' '}
           <span style={{ fontSize: '15px' }}>minutes left</span>
         </span>

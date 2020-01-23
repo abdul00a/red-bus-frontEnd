@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { persistStore, persistReducer } from 'redux-persist';
+import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 import 'antd/dist/antd.css';
 import Home from './components/Home/Home';
@@ -24,12 +24,12 @@ function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter>
-          <NavBar />
+            <NavBar />
             <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/search' component={Trips} />
-              <Route path='/payment' component={PaymentPage} />
-              <Route path='/bookinghistory' component={BookingHistory} />
+              <Route exact path="/" component={Home} />
+              <Route path="/search" component={Trips} />
+              <Route path="/payment" component={PaymentPage} />
+              <Route path="/bookinghistory" component={BookingHistory} />
             </Switch>
           </BrowserRouter>
           <Footer />
