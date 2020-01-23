@@ -27,12 +27,12 @@ const mapDispatchToProps = dispatch => {
 
 class TicketHistory extends Component {
   componentDidMount() {
-    this.props.RequestTickets('101127675401176944654');
+    this.props.RequestTickets('106669990584810577450');
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.message === 'Ticket cancelled') {
-      this.props.RequestTickets('101127675401176944654');
+      this.props.RequestTickets('106669990584810577450');
       alert(this.props.message);
       this.props.EmptyMessage();
     }
