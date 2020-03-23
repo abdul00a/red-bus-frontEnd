@@ -13,6 +13,7 @@ import './App.css';
 import rootReducer from './reducer/rootReducer';
 import PaymentPage from './components/paymentPage/paymentPage';
 import BookingHistory from './components/ticketHistory/tickethistory';
+
 import Footer from './components/footer/footer';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
